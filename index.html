@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Monu Rajput</title>
 
-<!-- Premium Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
 <style>
@@ -22,48 +21,68 @@ body{
     color:white;
 }
 
-/* Navigation */
+/* ===== NAVBAR ===== */
 nav{
     position:fixed;
     width:100%;
+    top:0;
     display:flex;
-    justify-content:flex-end;
-    padding:20px 40px;
+    justify-content:center;
+    padding:25px 0;
     z-index:1000;
-    background:rgba(0,0,0,0.4);
-    backdrop-filter:blur(5px);
+    background:rgba(0,0,0,0.5);
+    backdrop-filter:blur(8px);
+    transition:0.4s;
+}
+
+nav.shrink{
+    padding:15px 0;
+    background:rgba(0,0,0,0.9);
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin-left:30px;
-    font-weight:500;
+    margin:0 25px;
+    font-size:16px;
+    letter-spacing:1px;
+    position:relative;
     transition:0.3s;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    width:0;
+    height:2px;
+    bottom:-5px;
+    left:0;
+    background:#ff4d6d;
+    transition:0.4s;
 }
 
 nav a:hover{
     color:#ff4d6d;
 }
 
-/* Hero Section */
+nav a:hover::after{
+    width:100%;
+}
+
+/* ===== HERO ===== */
 .hero{
     height:100vh;
     background:url('hero.jpg') no-repeat center center/cover;
     display:flex;
-    flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:20px;
     position:relative;
 }
 
 .hero::after{
     content:"";
     position:absolute;
-    top:0;
-    left:0;
     width:100%;
     height:100%;
     background:rgba(0,0,0,0.6);
@@ -72,12 +91,12 @@ nav a:hover{
 .hero-content{
     position:relative;
     z-index:2;
-    animation:fadeIn 2s ease-in-out;
+    animation:fadeIn 2s ease;
 }
 
 .hero h1{
-    font-size:40px;
     font-weight:300;
+    font-size:38px;
     line-height:1.6;
     max-width:800px;
 }
@@ -89,13 +108,13 @@ nav a:hover{
     color:#ffccd5;
 }
 
-/* Quotes Section */
-.quotes{
+/* ===== SECTIONS ===== */
+section{
     padding:100px 20px;
     text-align:center;
 }
 
-.quotes h2{
+h2{
     font-size:35px;
     margin-bottom:40px;
 }
@@ -105,10 +124,22 @@ nav a:hover{
     margin:20px auto;
     font-size:18px;
     line-height:1.8;
-    opacity:0.8;
+    opacity:0.85;
 }
 
-/* About Section (Slide Animation) */
+/* ===== STORY FADE ===== */
+.fade-section{
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s ease;
+}
+
+.fade-section.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* ===== ABOUT SLIDE ===== */
 .about{
     max-height:0;
     overflow:hidden;
@@ -121,10 +152,6 @@ nav a:hover{
     padding:100px 20px;
 }
 
-.about-content{
-    text-align:center;
-}
-
 .profile-photo{
     width:160px;
     height:160px;
@@ -134,19 +161,7 @@ nav a:hover{
     border:3px solid #ff4d6d;
 }
 
-.about h2{
-    font-size:32px;
-    margin-bottom:20px;
-}
-
-.about p{
-    max-width:700px;
-    margin:auto;
-    line-height:1.8;
-    opacity:0.85;
-}
-
-/* Animation */
+/* ===== ANIMATION ===== */
 @keyframes fadeIn{
     from{opacity:0; transform:translateY(20px);}
     to{opacity:1; transform:translateY(0);}
@@ -156,80 +171,111 @@ nav a:hover{
 
 <body>
 
-<!-- Navigation -->
+<!-- NAV -->
 <nav>
 <a href="#home">Home</a>
 <a href="#quotes">Quotes</a>
+<a href="#story">Our Story</a>
 <a href="javascript:void(0)" onclick="toggleAbout()">About Me</a>
 </nav>
 
-<!-- Hero Section -->
+<!-- HERO -->
 <section class="hero" id="home">
 <div class="hero-content">
 <h1>
-Some connections don’t need explanations. <br>
-They just exist… stronger than distance, <br>
+Some connections don’t need explanations.<br>
+They just exist… stronger than distance,<br>
 deeper than words, and quieter than the world.
 </h1>
 <div class="signature">Monu Rajput</div>
 </div>
 </section>
 
-<!-- Quotes Section -->
-<section class="quotes" id="quotes">
+<!-- QUOTES -->
+<section id="quotes">
 <h2>My Feelings</h2>
 
 <div class="quote-box">
-Love sometimes promises forever,  
-but leaves without warning.  
-— Monu
+I wasn’t perfect, but I was real — and sometimes real is what hurts the most.
+<br>— Monu
 </div>
 
 <div class="quote-box">
-I stopped explaining my heart  
-to people who never tried to understand it.  
-— Monu
+I didn’t lose anyone, I just saw who was never truly mine.
+<br>— Monu
 </div>
 
 <div class="quote-box">
-Some memories don’t fade.  
-They just learn to stay silent.  
-— Monu
+Some nights I don’t miss a person, I miss the version of me who believed everything would stay.
+<br>— Monu
 </div>
-
 </section>
 
-<!-- About Section -->
-<section class="about" id="about">
-<div class="about-content">
+<!-- STORY -->
+<section class="fade-section" id="story">
+<h2>Our Story</h2>
 
-<img src="yourphoto.jpg" class="profile-photo">
+<div class="quote-box" style="text-align:left; white-space:pre-line;">
+एक समय ऐसा आया जब मुझे महसूस होने लगा कि वो दूर जाना चाहती है।
+उसकी बातें बदल गई थीं।
+पहले जहाँ हर छोटी चीज़ शेयर होती थी,
+वहाँ अब सिर्फ ज़रूरी बातें बची थीं।
 
-<h2>Monu Rajput</h2>
+मैंने कोशिश की पकड़ कर रखने की।
+और उसने कोशिश की धीरे-धीरे छूटने की।
 
-<p>
-A writer of silent emotions.  
-Someone who believes love is not loud —  
-it is steady, deep, and real.  
+उसने साफ कहा नहीं कि “जाओ”,
+पर उसके फैसलों में वो दूरी साफ दिखती थी।
 
-This space is not just a website,  
-it is a reflection of feelings  
-that words sometimes struggle to hold.
-</p>
+मैंने उसे रोका नहीं।
+क्योंकि कभी-कभी प्यार का मतलब पकड़ कर रखना नहीं,
+इज़्ज़त से जाने देना भी होता है।
 
+वो मुझे छोड़ कर नहीं गई,
+वो खुद को चुन कर गई।
+
+और शायद यही असली जिंदगी है —
+हर कहानी में विलेन नहीं होता,
+कभी-कभी बस दो लोग अलग रास्ते चुन लेते हैं।
 </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+<img src="yourphoto.jpg" class="profile-photo">
+<h2>Monu Rajput</h2>
+<p>
+A writer of silent emotions.
+Love is not loud — it is steady, deep, and real.
+</p>
 </section>
 
 <script>
 function toggleAbout() {
     var aboutSection = document.getElementById("about");
     aboutSection.classList.toggle("active");
-
     if (aboutSection.classList.contains("active")) {
         aboutSection.scrollIntoView({ behavior: "smooth" });
     }
 }
+
+window.addEventListener("scroll", function(){
+    var nav = document.querySelector("nav");
+    if(window.scrollY > 50){
+        nav.classList.add("shrink");
+    } else {
+        nav.classList.remove("shrink");
+    }
+
+    var fadeSection = document.querySelector(".fade-section");
+    var sectionTop = fadeSection.getBoundingClientRect().top;
+    var screenHeight = window.innerHeight;
+
+    if(sectionTop < screenHeight - 100){
+        fadeSection.classList.add("show");
+    }
+});
 </script>
 
 </body>
-</html>
+    </html>
