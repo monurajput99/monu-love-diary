@@ -5,277 +5,236 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Monu Rajput</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
+
+html {
+  scroll-behavior: smooth;
 }
 
-body{
-    font-family:'Poppins',sans-serif;
-    background:#000;
-    color:white;
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #000;
+  color: #fff;
 }
 
 /* ===== NAVBAR ===== */
-nav{
-    position:fixed;
-    width:100%;
-    top:0;
-    display:flex;
-    justify-content:center;
-    padding:25px 0;
-    z-index:1000;
-    background:rgba(0,0,0,0.5);
-    backdrop-filter:blur(8px);
-    transition:0.4s;
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 40px;
+  z-index: 1000;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(8px);
 }
 
-nav.shrink{
-    padding:15px 0;
-    background:rgba(0,0,0,0.9);
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 25px;
-    font-size:16px;
-    letter-spacing:1px;
-    position:relative;
-    transition:0.3s;
+nav a:hover {
+  color: #f5c542;
 }
 
-nav a::after{
-    content:"";
-    position:absolute;
-    width:0;
-    height:2px;
-    bottom:-5px;
-    left:0;
-    background:#ff4d6d;
-    transition:0.4s;
+/* ===== HERO SECTION ===== */
+
+.hero {
+  height: 100vh;
+  background: url("hero.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
 }
 
-nav a:hover{
-    color:#ff4d6d;
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
 }
 
-nav a:hover::after{
-    width:100%;
+.hero-content {
+  position: relative;
+  z-index: 1;
+  animation: fadeUp 2s ease;
 }
 
-/* ===== HERO ===== */
-.hero{
-    height:100vh;
-    background:url('hero.jpg') no-repeat center center/cover;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    position:relative;
+.hero-content h1 {
+  font-size: 50px;
+  letter-spacing: 3px;
 }
 
-.hero::after{
-    content:"";
-    position:absolute;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.6);
+.hero-content p {
+  font-size: 20px;
+  margin-top: 15px;
 }
 
-.hero-content{
-    position:relative;
-    z-index:2;
-    animation:fadeIn 2s ease;
+/* ===== STORY SECTION ===== */
+
+.story-section {
+  height: 100vh;
+  position: relative;
 }
 
-.hero h1{
-    font-weight:300;
-    font-size:38px;
-    line-height:1.6;
-    max-width:800px;
+.mehndi-container {
+  height: 100%;
+  position: relative;
 }
 
-.signature{
-    font-family:'Great Vibes',cursive;
-    font-size:55px;
-    margin-top:25px;
-    color:#ffccd5;
+.mehndi-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* ===== SECTIONS ===== */
-section{
-    padding:100px 20px;
-    text-align:center;
+.overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
 }
 
-h2{
-    font-size:35px;
-    margin-bottom:40px;
+.story-text {
+  max-width: 800px;
+  animation: fadeUp 2s ease;
 }
 
-.quote-box{
-    max-width:700px;
-    margin:20px auto;
-    font-size:18px;
-    line-height:1.8;
-    opacity:0.85;
+.story-text p {
+  font-size: 22px;
+  line-height: 1.8;
 }
 
-/* ===== STORY FADE ===== */
-.fade-section{
-    opacity:0;
-    transform:translateY(40px);
-    transition:1s ease;
+.story-text span {
+  display: block;
+  margin-top: 20px;
+  font-size: 24px;
+  font-style: italic;
 }
 
-.fade-section.show{
-    opacity:1;
-    transform:translateY(0);
+/* ===== ABOUT ME ===== */
+
+.about {
+  padding: 80px 20px;
+  text-align: center;
+  display: none;
+  animation: slideDown 1s ease forwards;
+  background: #111;
 }
 
-/* ===== ABOUT SLIDE ===== */
-.about{
-    max-height:0;
-    overflow:hidden;
-    transition:max-height 0.8s ease;
-    background:#111;
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 4px solid #f5c542;
 }
 
-.about.active{
-    max-height:1000px;
-    padding:100px 20px;
+.about h2 {
+  font-size: 32px;
 }
 
-.profile-photo{
-    width:160px;
-    height:160px;
-    border-radius:50%;
-    object-fit:cover;
-    margin-bottom:20px;
-    border:3px solid #ff4d6d;
+.about p {
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.8;
 }
 
 /* ===== ANIMATION ===== */
-@keyframes fadeIn{
-    from{opacity:0; transform:translateY(20px);}
-    to{opacity:1; transform:translateY(0);}
+
+@keyframes fadeUp {
+  from {opacity: 0; transform: translateY(40px);}
+  to {opacity: 1; transform: translateY(0);}
 }
+
+@keyframes slideDown {
+  from {opacity: 0; transform: translateY(-40px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
 </style>
 </head>
-
 <body>
 
-<!-- NAV -->
+<!-- NAVBAR -->
 <nav>
-<a href="#home">Home</a>
-<a href="#quotes">Quotes</a>
-<a href="#story">Our Story</a>
-<a href="javascript:void(0)" onclick="toggleAbout()">About Me</a>
+  <a href="#home">Home</a>
+  <a href="#story">Our Story</a>
+  <a href="javascript:void(0)" onclick="toggleAbout()">About Me</a>
 </nav>
 
-<!-- HERO -->
-<section class="hero" id="home">
-<div class="hero-content">
-<h1>
-Some connections don’t need explanations.<br>
-They just exist… stronger than distance,<br>
-deeper than words, and quieter than the world.
-</h1>
-<div class="signature">Monu Rajput</div>
-</div>
+<!-- HERO SECTION -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>Monu Rajput</h1>
+    <p>A Story Written With Love & Lessons</p>
+  </div>
 </section>
 
-<!-- QUOTES -->
-<section id="quotes">
-<h2>My Feelings</h2>
+<!-- STORY SECTION -->
+<section id="story" class="story-section">
+  <div class="mehndi-container">
+    <img src="mehndi.jpg" alt="Isa Mehndi" class="mehndi-photo">
 
-<div class="quote-box">
-I wasn’t perfect, but I was real — and sometimes real is what hurts the most.
-<br>— Monu
-</div>
+    <div class="overlay">
+      <div class="story-text">
+        <p>
+          तुमने उसे एक जश्न कहा,<br>
+          मैंने उसे एक सीख माना।<br><br>
 
-<div class="quote-box">
-I didn’t lose anyone, I just saw who was never truly mine.
-<br>— Monu
-</div>
-
-<div class="quote-box">
-Some nights I don’t miss a person, I miss the version of me who believed everything would stay.
-<br>— Monu
-</div>
+          उस दिन समझ आया —<br>
+          हर वो इंसान जो हमारी कहानी में मुस्कुराता है,<br>
+          वो आख़िरी पन्ने तक साथ रहने के लिए नहीं होता।
+        </p>
+        <span>— Monu</span>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- STORY -->
-<section class="fade-section" id="story">
-<h2>Our Story</h2>
-
-<div class="quote-box" style="text-align:left; white-space:pre-line;">
-एक समय ऐसा आया जब मुझे महसूस होने लगा कि वो दूर जाना चाहती है।
-उसकी बातें बदल गई थीं।
-पहले जहाँ हर छोटी चीज़ शेयर होती थी,
-वहाँ अब सिर्फ ज़रूरी बातें बची थीं।
-
-मैंने कोशिश की पकड़ कर रखने की।
-और उसने कोशिश की धीरे-धीरे छूटने की।
-
-उसने साफ कहा नहीं कि “जाओ”,
-पर उसके फैसलों में वो दूरी साफ दिखती थी।
-
-मैंने उसे रोका नहीं।
-क्योंकि कभी-कभी प्यार का मतलब पकड़ कर रखना नहीं,
-इज़्ज़त से जाने देना भी होता है।
-
-वो मुझे छोड़ कर नहीं गई,
-वो खुद को चुन कर गई।
-
-और शायद यही असली जिंदगी है —
-हर कहानी में विलेन नहीं होता,
-कभी-कभी बस दो लोग अलग रास्ते चुन लेते हैं।
-</div>
-</section>
-
-<!-- ABOUT -->
-<section class="about" id="about">
-<img src="yourphoto.jpg" class="profile-photo">
-<h2>Monu Rajput</h2>
-<p>
-A writer of silent emotions.
-Love is not loud — it is steady, deep, and real.
-</p>
+<!-- ABOUT ME -->
+<section id="about" class="about">
+  <img src="profile.jpg" class="profile-photo" alt="Monu">
+  <h2>Monu Rajput</h2>
+  <p>
+    A simple man with deep emotions.  
+    I believe love teaches more than it promises.  
+    Life is not about who stays —  
+    it’s about what you learn when they leave.
+  </p>
 </section>
 
 <script>
 function toggleAbout() {
-    var aboutSection = document.getElementById("about");
-    aboutSection.classList.toggle("active");
-    if (aboutSection.classList.contains("active")) {
-        aboutSection.scrollIntoView({ behavior: "smooth" });
-    }
+  var about = document.getElementById("about");
+  if (about.style.display === "block") {
+    about.style.display = "none";
+  } else {
+    about.style.display = "block";
+    about.scrollIntoView({behavior: "smooth"});
+  }
 }
-
-window.addEventListener("scroll", function(){
-    var nav = document.querySelector("nav");
-    if(window.scrollY > 50){
-        nav.classList.add("shrink");
-    } else {
-        nav.classList.remove("shrink");
-    }
-
-    var fadeSection = document.querySelector(".fade-section");
-    var sectionTop = fadeSection.getBoundingClientRect().top;
-    var screenHeight = window.innerHeight;
-
-    if(sectionTop < screenHeight - 100){
-        fadeSection.classList.add("show");
-    }
-});
 </script>
 
 </body>
-    </html>
+      </html>
