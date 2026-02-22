@@ -1,248 +1,210 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Monu Rajput | Personal Diary</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monu Rajput</title>
 
-<!-- Premium Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<!-- Premium Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
 <style>
-
-html{
-scroll-behavior:smooth;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
 body{
-margin:0;
-font-family:'Poppins',sans-serif;
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-color:white;
-text-align:center;
-overflow-x:hidden;
+    font-family:'Poppins',sans-serif;
+    background:#000;
+    color:white;
 }
 
-/* HERO SECTION */
+/* Navigation */
+nav{
+    position:fixed;
+    width:100%;
+    display:flex;
+    justify-content:flex-end;
+    padding:20px 40px;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#ff4d6d;
+}
+
+/* Hero Section */
 .hero{
-padding:80px 20px 40px;
-animation:fadeDown 1.5s ease;
+    height:100vh;
+    background:url('hero.jpg') no-repeat center center/cover;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    position:relative;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    animation:fadeIn 2s ease-in-out;
+}
+
+.hero h1{
+    font-size:40px;
+    font-weight:300;
+    line-height:1.6;
+    max-width:800px;
+}
+
+.signature{
+    font-family:'Great Vibes',cursive;
+    font-size:55px;
+    margin-top:25px;
+    color:#ffccd5;
+}
+
+/* Quotes Section */
+.quotes{
+    padding:100px 20px;
+    text-align:center;
+}
+
+.quotes h2{
+    font-size:35px;
+    margin-bottom:40px;
+}
+
+.quote-box{
+    max-width:700px;
+    margin:20px auto;
+    font-size:18px;
+    line-height:1.8;
+    opacity:0.8;
+}
+
+/* About Section */
+.about{
+    padding:100px 20px;
+    text-align:center;
+    background:#111;
 }
 
 .profile-photo{
-width:190px;
-height:190px;
-border-radius:50%;
-object-fit:cover;
-border:4px solid white;
-box-shadow:0 10px 25px rgba(0,0,0,0.5);
-transition:0.4s;
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:20px;
+    border:3px solid #ff4d6d;
 }
 
-.profile-photo:hover{
-transform:scale(1.05);
+.about h2{
+    font-size:32px;
+    margin-bottom:20px;
 }
 
-h1{
-margin-top:20px;
-font-size:34px;
-font-weight:700;
-letter-spacing:1px;
+.about p{
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+    opacity:0.85;
 }
 
-.tagline{
-opacity:0.85;
-font-size:15px;
-margin-top:8px;
-}
-
-/* NAVBAR */
-.navbar{
-display:flex;
-justify-content:center;
-gap:25px;
-margin:40px 0;
-animation:fadeUp 1.5s ease;
-}
-
-.btn{
-padding:12px 28px;
-background:rgba(255,77,109,0.9);
-color:white;
-text-decoration:none;
-border-radius:30px;
-font-weight:600;
-transition:0.3s;
-box-shadow:0 5px 15px rgba(0,0,0,0.3);
-}
-
-.btn:hover{
-background:#ff1a4d;
-transform:translateY(-3px);
-}
-
-.dropdown{
-position:relative;
-}
-
-.dropdown-content{
-display:none;
-position:absolute;
-background:rgba(0,0,0,0.9);
-min-width:170px;
-border-radius:12px;
-overflow:hidden;
-top:45px;
-}
-
-.dropdown-content a{
-color:white;
-padding:12px;
-display:block;
-text-decoration:none;
-transition:0.3s;
-}
-
-.dropdown-content a:hover{
-background:#ff4d6d;
-}
-
-.dropdown:hover .dropdown-content{
-display:block;
-}
-
-/* SECTION */
-section{
-padding:70px 20px;
-animation:fadeIn 2s ease;
-}
-
-h2{
-margin-bottom:25px;
-font-weight:600;
-}
-
-/* GLASS CARDS */
-.card{
-background:rgba(255,255,255,0.08);
-backdrop-filter:blur(10px);
-padding:25px;
-margin:20px auto;
-border-radius:18px;
-max-width:650px;
-box-shadow:0 8px 25px rgba(0,0,0,0.3);
-transition:0.4s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-}
-
-/* FOOTER */
-footer{
-margin-top:40px;
-padding:25px;
-opacity:0.7;
-font-size:14px;
-}
-
-/* ANIMATIONS */
-@keyframes fadeDown{
-from{opacity:0;transform:translateY(-40px);}
-to{opacity:1;transform:translateY(0);}
-}
-
-@keyframes fadeUp{
-from{opacity:0;transform:translateY(40px);}
-to{opacity:1;transform:translateY(0);}
-}
-
+/* Animation */
 @keyframes fadeIn{
-from{opacity:0;}
-to{opacity:1;}
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<section id="home" class="hero">
+<!-- Navigation -->
+<nav>
+<a href="#home">Home</a>
+<a href="#quotes">Quotes</a>
+<a href="#about">About Me</a>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+<div class="hero-content">
+<h1>
+Some connections don’t need explanations. <br>
+They just exist… stronger than distance, <br>
+deeper than words, and quieter than the world.
+</h1>
+<div class="signature">Monu Rajput</div>
+</div>
+</section>
+
+<!-- Quotes Section -->
+<section class="quotes" id="quotes">
+<h2>My Feelings</h2>
+
+<div class="quote-box">
+Love sometimes promises forever,  
+but leaves without warning.  
+— Monu
+</div>
+
+<div class="quote-box">
+I stopped explaining my heart  
+to people who never tried to understand it.  
+— Monu
+</div>
+
+<div class="quote-box">
+Some memories don’t fade.  
+They just learn to stay silent.  
+— Monu
+</div>
+
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+
 <img src="yourphoto.jpg" class="profile-photo">
-<h1>Monu Rajput</h1>
-<p class="tagline">Some feelings are never spoken, they are simply written in silence.</p>
-</section>
 
-<!-- NAVIGATION -->
-<div class="navbar">
-<a href="#home" class="btn">Home</a>
+<h2>Monu Rajput</h2>
 
-<div class="dropdown">
-<a class="btn">Quotes</a>
-<div class="dropdown-content">
-<a href="#love">Love Quotes</a>
-<a href="#anti">Anti Love</a>
-</div>
-</div>
+<p>
+A writer of silent emotions.  
+Someone who believes love is not loud —  
+it is steady, deep, and real.  
 
-<a href="#about" class="btn">About Me</a>
-</div>
-
-<!-- LOVE SECTION -->
-<section id="love">
-<h2>Love Quotes</h2>
-
-<div class="card">
-Sometimes love isn’t about promises or forever.  
-It’s about choosing the same person every single day, even when things are not perfect.  
-<br><br>— Monu
-</div>
-
-<div class="card">
-There are some people who become home without owning a house in your life.  
-<br><br>— Monu
-</div>
+This space is not just a website,  
+it is a reflection of feelings  
+that words sometimes struggle to hold.
+</p>
 
 </section>
-
-<!-- ANTI LOVE SECTION -->
-<section id="anti">
-<h2>Anti Love Quotes</h2>
-<div class="card">
-Love sometimes promises forever,
-but leaves without warning.
-<br><br>— Monu
-</div>
-<div class="card">
-Love looks beautiful from distance,  
-but up close it teaches lessons that leave permanent marks.  
-<br><br>— Monu
-</div>
-
-<div class="card">
-Not every story that begins with love ends with happiness.  
-Some just end with maturity.  
-<br><br>— Monu
-</div>
-
-</section>
-
-<!-- ABOUT ME -->
-<section id="about">
-<h2>About Me</h2>
-
-<div class="card">
-Hi, I’m Monu Rajput.  
-This website is my personal diary on the internet.  
-Every line written here carries a real emotion, a real memory, or a silent feeling that once meant everything.  
-This space is not about perfection — it’s about truth.
-</div>
-
-</section>
-
-<footer>
-© 2026 Monu Rajput | Personal Diary
-</footer>
 
 </body>
-    </html>
+</html>
