@@ -12,23 +12,25 @@
             text-align:center;
         }
         .container{
-            padding:40px 20px;
+            padding:50px 20px;
         }
-        img{
-            width:160px;
-            height:160px;
+        .profile-photo{
+            width:180px;
+            height:180px;
             border-radius:50%;
             border:4px solid white;
             object-fit:cover;
-            margin-top:20px;
+            margin:0 auto 20px;
+            display:block;
         }
         h1{
-            font-size:35px;
-            margin:15px 0 5px;
+            font-size:36px;
+            margin-bottom:10px;
         }
-        p.tagline{
+        .tagline{
             font-size:18px;
             opacity:0.8;
+            margin-bottom:30px;
         }
         .quote{
             background:rgba(255,255,255,0.08);
@@ -51,13 +53,18 @@
 <body>
 <div class="container">
 
-    <img src="yourphoto.jpg" alt="Monu">
+    <!-- Photo upar -->
+    <img src="yourphoto.jpg" alt="Monu" class="profile-photo">
 
-    <h1>Monu’s Love Diary</h1>
+    <!-- Name -->
+    <h1>Monu Rajput</h1>
+
+    <!-- Tagline -->
     <p class="tagline">Some feelings are never spoken, only written...</p>
 
+    <!-- Quotes Section -->
     <div class="quote">
-        “Kuch log zindagi me itne chupchaap aa jaate hain ki pata hi nahi chalta kab woh aadat ban gaye… aur phir unke bina har din thoda sa adhoora lagne lagta hai.”
+        “Kuch log zindagi me itne chupchaap aa jaate hain ki pata hi nahi chalta kab woh aadat ban gaye… aur phir unke bina har din thoda sa adhoora lagta hai.”
         <br><br>— Monu
     </div>
 
@@ -87,4 +94,4 @@
 
 </div>
 </body>
-      </html>
+</html>
