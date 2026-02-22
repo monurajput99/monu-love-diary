@@ -1,97 +1,244 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Monu’s Love Diary</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body{
-            margin:0;
-            font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(to right, #141e30, #243b55);
-            color:white;
-            text-align:center;
-        }
-        .container{
-            padding:50px 20px;
-        }
-        .profile-photo{
-            width:180px;
-            height:180px;
-            border-radius:50%;
-            border:4px solid white;
-            object-fit:cover;
-            margin:0 auto 20px;
-            display:block;
-        }
-        h1{
-            font-size:36px;
-            margin-bottom:10px;
-        }
-        .tagline{
-            font-size:18px;
-            opacity:0.8;
-            margin-bottom:30px;
-        }
-        .quote{
-            background:rgba(255,255,255,0.08);
-            margin:25px auto;
-            padding:25px;
-            width:85%;
-            border-radius:12px;
-            font-size:18px;
-            line-height:1.6;
-        }
-        footer{
-            margin-top:40px;
-            padding:20px;
-            font-size:14px;
-            opacity:0.7;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Monu Rajput | Personal Diary</title>
+
+<!-- Premium Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+/* HERO SECTION */
+.hero{
+padding:80px 20px 40px;
+animation:fadeDown 1.5s ease;
+}
+
+.profile-photo{
+width:190px;
+height:190px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid white;
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
+transition:0.4s;
+}
+
+.profile-photo:hover{
+transform:scale(1.05);
+}
+
+h1{
+margin-top:20px;
+font-size:34px;
+font-weight:700;
+letter-spacing:1px;
+}
+
+.tagline{
+opacity:0.85;
+font-size:15px;
+margin-top:8px;
+}
+
+/* NAVBAR */
+.navbar{
+display:flex;
+justify-content:center;
+gap:25px;
+margin:40px 0;
+animation:fadeUp 1.5s ease;
+}
+
+.btn{
+padding:12px 28px;
+background:rgba(255,77,109,0.9);
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-weight:600;
+transition:0.3s;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+.btn:hover{
+background:#ff1a4d;
+transform:translateY(-3px);
+}
+
+.dropdown{
+position:relative;
+}
+
+.dropdown-content{
+display:none;
+position:absolute;
+background:rgba(0,0,0,0.9);
+min-width:170px;
+border-radius:12px;
+overflow:hidden;
+top:45px;
+}
+
+.dropdown-content a{
+color:white;
+padding:12px;
+display:block;
+text-decoration:none;
+transition:0.3s;
+}
+
+.dropdown-content a:hover{
+background:#ff4d6d;
+}
+
+.dropdown:hover .dropdown-content{
+display:block;
+}
+
+/* SECTION */
+section{
+padding:70px 20px;
+animation:fadeIn 2s ease;
+}
+
+h2{
+margin-bottom:25px;
+font-weight:600;
+}
+
+/* GLASS CARDS */
+.card{
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+padding:25px;
+margin:20px auto;
+border-radius:18px;
+max-width:650px;
+box-shadow:0 8px 25px rgba(0,0,0,0.3);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+/* FOOTER */
+footer{
+margin-top:40px;
+padding:25px;
+opacity:0.7;
+font-size:14px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeDown{
+from{opacity:0;transform:translateY(-40px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(40px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+</style>
 </head>
 
 <body>
-<div class="container">
 
-    <!-- Photo upar -->
-    <img src="yourphoto.jpg" class="profile-photo">
+<!-- HERO -->
+<section id="home" class="hero">
+<img src="yourphoto.jpg" class="profile-photo">
+<h1>Monu Rajput</h1>
+<p class="tagline">Some feelings are never spoken, they are simply written in silence.</p>
+</section>
 
-    <!-- Name -->
-    <h1>Monu Rajput</h1>
+<!-- NAVIGATION -->
+<div class="navbar">
+<a href="#home" class="btn">Home</a>
 
-    <!-- Tagline -->
-    <p class="tagline">Some feelings are never spoken, only written...</p>
-
-    <!-- Quotes Section -->
-    <div class="quote">
-        “Kuch log zindagi me itne chupchaap aa jaate hain ki pata hi nahi chalta kab woh aadat ban gaye… aur phir unke bina har din thoda sa adhoora lagta hai.”
-        <br><br>— Monu
-    </div>
-
-    <div class="quote">
-        “Main zyada bolta nahi, par ek insaan hai jiske saamne dil apne aap halka sa ho jaata hai.”
-        <br><br>— Monu
-    </div>
-
-    <div class="quote">
-        “Kabhi kabhi darr lagta hai ki jo itna apna lagta hai, kahin waqt use mujhse door na kar de.”
-        <br><br>— Monu
-    </div>
-
-    <div class="quote">
-        “Har mohabbat ka anjaam saath rehna nahi hota, kuch pyaar sirf yaad bankar bhi zinda rehte hain.”
-        <br><br>— Monu
-    </div>
-
-    <div class="quote">
-        “Agar tum kabhi yahan tak padh lo, to samajh lena har lafz me tumhara hissa hai… kuch ehsaas waqt ke saath kam nahi hote.”
-        <br><br>— Monu
-    </div>
-
-    <footer>
-        © 2026 Monu | Monu’s Love Diary
-    </footer>
-
+<div class="dropdown">
+<a class="btn">Quotes</a>
+<div class="dropdown-content">
+<a href="#love">Love Quotes</a>
+<a href="#anti">Anti Love</a>
 </div>
+</div>
+
+<a href="#about" class="btn">About Me</a>
+</div>
+
+<!-- LOVE SECTION -->
+<section id="love">
+<h2>Love Quotes</h2>
+
+<div class="card">
+Sometimes love isn’t about promises or forever.  
+It’s about choosing the same person every single day, even when things are not perfect.  
+<br><br>— Monu
+</div>
+
+<div class="card">
+There are some people who become home without owning a house in your life.  
+<br><br>— Monu
+</div>
+
+</section>
+
+<!-- ANTI LOVE SECTION -->
+<section id="anti">
+<h2>Anti Love Quotes</h2>
+
+<div class="card">
+Love looks beautiful from distance,  
+but up close it teaches lessons that leave permanent marks.  
+<br><br>— Monu
+</div>
+
+<div class="card">
+Not every story that begins with love ends with happiness.  
+Some just end with maturity.  
+<br><br>— Monu
+</div>
+
+</section>
+
+<!-- ABOUT ME -->
+<section id="about">
+<h2>About Me</h2>
+
+<div class="card">
+Hi, I’m Monu Rajput.  
+This website is my personal diary on the internet.  
+Every line written here carries a real emotion, a real memory, or a silent feeling that once meant everything.  
+This space is not about perfection — it’s about truth.
+</div>
+
+</section>
+
+<footer>
+© 2026 Monu Rajput | Personal Diary
+</footer>
+
 </body>
-</html>
+    </html>
