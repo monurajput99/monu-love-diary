@@ -3,9 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Monu Rajput</title>
-<meta name="google-site-verification" content="Lk48R6XcE8ocCCt-8ksNlcdp22lo6DG4siaTFfYtVe0" />
+<title>Monu Rajput - Notes & Stories</title>
+
+<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<!-- SEO Meta -->
+<meta name="description" content="Monu Rajput website: real love stories, emotional quotes, mehndi photos, and personal journey.">
+<meta name="google-site-verification" content="ABCDEFG1234567" />
 
 <style>
 *{
@@ -14,7 +19,6 @@
     box-sizing:border-box;
     scroll-behavior:smooth;
 }
-
 body{
     font-family:'Poppins',sans-serif;
     background:#000;
@@ -34,12 +38,10 @@ nav{
     backdrop-filter:blur(8px);
     transition:0.4s;
 }
-
 nav.shrink{
     padding:15px 0;
     background:rgba(0,0,0,0.9);
 }
-
 nav a{
     color:white;
     text-decoration:none;
@@ -49,7 +51,6 @@ nav a{
     position:relative;
     transition:0.3s;
 }
-
 nav a::after{
     content:"";
     position:absolute;
@@ -60,11 +61,9 @@ nav a::after{
     background:#ff4d6d;
     transition:0.4s;
 }
-
 nav a:hover{
     color:#ff4d6d;
 }
-
 nav a:hover::after{
     width:100%;
 }
@@ -79,7 +78,6 @@ nav a:hover::after{
     text-align:center;
     position:relative;
 }
-
 .hero::after{
     content:"";
     position:absolute;
@@ -87,20 +85,17 @@ nav a:hover::after{
     height:100%;
     background:rgba(0,0,0,0.6);
 }
-
 .hero-content{
     position:relative;
     z-index:2;
     animation:fadeIn 2s ease;
 }
-
 .hero h1{
     font-weight:300;
     font-size:38px;
     line-height:1.6;
     max-width:800px;
 }
-
 .signature{
     font-family:'Great Vibes',cursive;
     font-size:55px;
@@ -113,12 +108,10 @@ section{
     padding:100px 20px;
     text-align:center;
 }
-
 h2{
     font-size:35px;
     margin-bottom:40px;
 }
-
 .quote-box{
     max-width:700px;
     margin:20px auto;
@@ -127,54 +120,12 @@ h2{
     opacity:0.85;
 }
 
-/* ===== MEHNDI SECTION ===== */
-.mehndi-wrapper{
-    position:relative;
-    max-width:900px;
-    margin:40px auto;
-    border-radius:15px;
-    overflow:hidden;
-}
-
-.mehndi-img{
-    width:100%;
-    display:block;
-}
-
-.mehndi-overlay{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.55);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:30px;
-}
-
-.mehndi-text{
-    font-size:20px;
-    line-height:1.8;
-    max-width:700px;
-}
-
-.mehndi-sign{
-    margin-top:20px;
-    font-family:'Great Vibes',cursive;
-    font-size:40px;
-    color:#ffccd5;
-}
-
 /* ===== STORY FADE ===== */
 .fade-section{
     opacity:0;
     transform:translateY(40px);
     transition:1s ease;
 }
-
 .fade-section.show{
     opacity:1;
     transform:translateY(0);
@@ -187,18 +138,25 @@ h2{
     transition:max-height 0.8s ease;
     background:#111;
 }
-
 .about.active{
     max-height:1000px;
     padding:100px 20px;
 }
-
 .profile-photo{
     width:160px;
     height:160px;
     border-radius:50%;
     object-fit:cover;
     margin-bottom:20px;
+    border:3px solid #ff4d6d;
+}
+
+/* ===== MEHNDI PHOTO ===== */
+.mehndi-photo{
+    width:300px;
+    border-radius:15px;
+    margin:20px auto;
+    display:block;
     border:3px solid #ff4d6d;
 }
 
@@ -212,13 +170,16 @@ h2{
 
 <body>
 
+<!-- NAV -->
 <nav>
 <a href="#home">Home</a>
-<a href="#quotes">Quotes</a>
+<a href="#quotes">Notes</a>
 <a href="#story">Our Story</a>
+<a href="#love-advice">Love Advice</a>
 <a href="javascript:void(0)" onclick="toggleAbout()">About Me</a>
 </nav>
 
+<!-- HERO -->
 <section class="hero" id="home">
 <div class="hero-content">
 <h1>
@@ -230,8 +191,9 @@ deeper than words, and quieter than the world.
 </div>
 </section>
 
+<!-- QUOTES -->
 <section id="quotes">
-<h2>My Feelings</h2>
+<h2>My Notes</h2>
 
 <div class="quote-box">
 I wasn’t perfect, but I was real — and sometimes real is what hurts the most.
@@ -247,57 +209,72 @@ I didn’t lose anyone, I just saw who was never truly mine.
 Some nights I don’t miss a person, I miss the version of me who believed everything would stay.
 <br>— Monu
 </div>
+
+<div class="quote-box">
+Love sometimes promises, but life teaches lessons.
+<br>— Monu
+</div>
+
+<div class="quote-box">
+Distance doesn’t kill feelings, misunderstandings do.
+<br>— Monu
+</div>
+
+<div class="quote-box">
+Sometimes letting go is the only way to hold on.
+<br>— Monu
+</div>
+
+<!-- Coming Soon after last quote -->
+<div class="quote-box" style="opacity:0.7; font-style:italic; margin-top:30px;">
+Coming Soon… ❤️
+</div>
 </section>
 
+<!-- OUR STORY -->
 <section class="fade-section" id="story">
 <h2>Our Story</h2>
 
-<div class="mehndi-wrapper">
-<img src="mehndi.jpg" class="mehndi-img">
+<img src="mehndi.jpg" class="mehndi-photo" alt="Isa Mehndi photo">
+<div class="quote-box" style="text-align:left; white-space:pre-line;">
+एक समय ऐसा आया जब मुझे महसूस होने लगा कि वो दूर जाना चाहती है।  
+हमारे बीच की हर छोटी बात अब बड़ी दूरी की तरह लगने लगी थी।  
+पहले जहाँ हर छोटी खुशी और चिंता शेयर होती थी,  
+वहाँ अब सिर्फ अनकहे सवाल और खामोशी बची थी।  
 
-<div class="mehndi-overlay">
-<div class="mehndi-text">
-तुमने उसे एक जश्न कहा,<br>
-मैंने उसे एक सीख माना।<br><br>
+मैंने कोशिश की पकड़ कर रखने की,  
+और उसने धीरे-धीरे खुद को मेरी पहुँच से दूर कर लिया।  
 
-उस दिन समझ आया —<br>
-हर वो इंसान जो हमारी कहानी में मुस्कुराता है,<br>
-वो आख़िरी पन्ने तक साथ रहने के लिए नहीं होता।
-<div class="mehndi-sign">— Monu</div>
-</div>
-</div>
-</div>
+उसने कभी साफ नहीं कहा “जाओ”,  
+लेकिन उसके फैसलों में वो दूरी और चुप्पी साफ दिख रही थी।  
 
-<div class="quote-box" style="text-align:left; white-space:pre-line; margin-top:60px;">
-एक समय ऐसा आया जब मुझे महसूस होने लगा कि वो दूर जाना चाहती है।
-उसकी बातें बदल गई थीं।
-पहले जहाँ हर छोटी चीज़ शेयर होती थी,
-वहाँ अब सिर्फ ज़रूरी बातें बची थीं।
+मैंने उसे रोका नहीं, क्योंकि कभी-कभी प्यार का मतलब पकड़ कर रखना नहीं,  
+इज़्ज़त से जाने देना भी होता है।  
 
-मैंने कोशिश की पकड़ कर रखने की।
-और उसने कोशिश की धीरे-धीरे छूटने की।
+वो मुझे छोड़ कर नहीं गई,  
+वो सिर्फ खुद को चुन कर गई।  
 
-उसने साफ कहा नहीं कि “जाओ”,
-पर उसके फैसलों में वो दूरी साफ दिखती थी।
-
-मैंने उसे रोका नहीं।
-क्योंकि कभी-कभी प्यार का मतलब पकड़ कर रखना नहीं,
-इज़्ज़त से जाने देना भी होता है।
-
-वो मुझे छोड़ कर नहीं गई,
-वो खुद को चुन कर गई।
-
-और शायद यही असली जिंदगी है —
-हर कहानी में विलेन नहीं होता,
+और शायद यही असली जिंदगी है —  
+हर कहानी में विलेन नहीं होता,  
 कभी-कभी बस दो लोग अलग रास्ते चुन लेते हैं।
 </div>
 </section>
 
+<!-- LOVE ADVICE -->
+<section class="fade-section" id="love-advice">
+<h2>Love Advice</h2>
+
+<div class="quote-box" style="opacity:0.7; font-style:italic;">
+Coming Soon… ❤️  
+</div>
+</section>
+
+<!-- ABOUT -->
 <section class="about" id="about">
-<img src="yourphoto.jpg" class="profile-photo">
+<img src="yourphoto.jpg" class="profile-photo" alt="Monu Rajput profile photo">
 <h2>Monu Rajput</h2>
 <p>
-A writer of silent emotions.
+A writer of silent emotions.<br>
 Love is not loud — it is steady, deep, and real.
 </p>
 </section>
@@ -319,15 +296,16 @@ window.addEventListener("scroll", function(){
         nav.classList.remove("shrink");
     }
 
-    var fadeSection = document.querySelector(".fade-section");
-    var sectionTop = fadeSection.getBoundingClientRect().top;
-    var screenHeight = window.innerHeight;
-
-    if(sectionTop < screenHeight - 100){
-        fadeSection.classList.add("show");
-    }
+    var fadeSections = document.querySelectorAll(".fade-section");
+    fadeSections.forEach(function(section){
+        var sectionTop = section.getBoundingClientRect().top;
+        var screenHeight = window.innerHeight;
+        if(sectionTop < screenHeight - 100){
+            section.classList.add("show");
+        }
+    });
 });
 </script>
 
 </body>
-  </html>
+    </html>
