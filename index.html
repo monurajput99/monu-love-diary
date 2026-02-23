@@ -3,211 +3,239 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Monu Rajput - Notes & Stories</title>
+<title>Monu Rajput | Writer of Silent Realities</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth;}
-body{font-family:'Poppins',sans-serif; background:#000; color:white;}
 
-/* NAVBAR */
-nav{position:fixed; width:100%; top:0; display:flex; justify-content:center; padding:25px 0; z-index:1000; background:rgba(0,0,0,0.5); backdrop-filter:blur(8px); transition:0.4s;}
-nav.shrink{padding:15px 0; background:rgba(0,0,0,0.9);}
-nav a{color:white; text-decoration:none; margin:0 25px; font-size:16px; letter-spacing:1px; position:relative; transition:0.3s;}
-nav a::after{content:""; position:absolute; width:0; height:2px; bottom:-5px; left:0; background:#ff4d6d; transition:0.4s;}
-nav a:hover{color:#ff4d6d;}
-nav a:hover::after{width:100%;}
-
-/* HERO */
-.hero{height:100vh; background:url('hero.jpg') no-repeat center center/cover; display:flex; justify-content:center; align-items:center; text-align:center; position:relative;}
-.hero::after{content:""; position:absolute; width:100%; height:100%; background:rgba(0,0,0,0.6);}
-.hero-content{position:relative; z-index:2; animation:fadeIn 2s ease;}
-.hero h1{font-weight:300; font-size:38px; line-height:1.6; max-width:800px;}
-.signature{font-family:'Great Vibes',cursive; font-size:55px; margin-top:25px; color:#ffccd5;}
-
-/* SECTIONS */
-section{padding:100px 20px; text-align:center;}
-h2{font-size:35px; margin-bottom:40px;}
-.quote-box{max-width:700px; margin:20px auto; font-size:18px; line-height:1.8; opacity:0.85;}
-
-/* STORY FADE */
-.fade-section{opacity:0; transform:translateY(40px); transition:1s ease;}
-.fade-section.show{opacity:1; transform:translateY(0);}
-
-/* ABOUT SLIDE */
-.about{max-height:0; overflow:hidden; transition:max-height 0.8s ease; background:#111;}
-.about.active{max-height:1000px; padding:100px 20px;}
-.profile-photo{width:160px; height:160px; border-radius:50%; object-fit:cover; margin-bottom:20px; border:3px solid #ff4d6d;}
-
-/* MEHNDI PHOTO CONTAINER - LARGE + TEXT POSITION UPDATED */
-.mehndi-container{position:relative; display:block; margin:40px auto; width:80%; max-width:900px;}
-.mehndi-photo{width:100%; border-radius:15px; border:3px solid #ff4d6d; display:block;}
-.mehndi-text{
-    position:absolute;
-    top:60%; /* thoda niche */
-    left:50%;
-    transform:translate(-50%,-50%);
-    color:white;
-    text-align:center;
-    font-size:28px; /* thoda bada */
-    line-height:1.6;
-    font-style:italic;
-    opacity:0.85;
-    text-shadow: 2px 2px 12px #000;
+body{
+    margin:0;
+    background:#0d0d0d;
+    color:#eaeaea;
+    font-family:'Lora', serif;
+    line-height:1.8;
 }
 
-/* LOVE ADVICE PAGES */
-.advice-container{position:relative; max-width:700px; margin:30px auto; background:#111; padding:20px; border-radius:10px; min-height:120px;}
-.advice-page{display:none; font-size:18px; line-height:1.8; opacity:0.9;}
-.advice-page.active{display:block;}
-.advice-buttons{margin-top:15px;}
-.advice-buttons button{background:#ff4d6d; border:none; color:white; padding:8px 18px; margin:0 10px; cursor:pointer; border-radius:5px; font-weight:500; transition:0.3s;}
-.advice-buttons button:hover{background:#ffccd5; color:#000;}
+h1,h2,h3{
+    font-family:'Playfair Display', serif;
+    color:#c9a227;
+}
 
-/* ANIMATION */
-@keyframes fadeIn{from{opacity:0; transform:translateY(20px);} to{opacity:1; transform:translateY(0);}}
+section{
+    padding:60px 20px;
+    max-width:900px;
+    margin:auto;
+    border-bottom:1px solid rgba(201,162,39,0.2);
+    opacity:0;
+    transform:translateY(30px);
+    transition:all 1s ease;
+}
+
+section.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.hero{
+    text-align:center;
+    padding:100px 20px;
+}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    font-size:18px;
+    color:#aaa;
+    letter-spacing:2px;
+}
+
+.readers{
+    margin-top:20px;
+    font-size:14px;
+    letter-spacing:2px;
+    opacity:0.8;
+}
+
+.card{
+    border:1px solid rgba(201,162,39,0.3);
+    padding:25px;
+    margin-bottom:30px;
+    border-radius:8px;
+    background:#111;
+}
+
+.quote{
+    border-left:3px solid #c9a227;
+    padding-left:15px;
+    margin:20px 0;
+    font-style:italic;
+}
+
+footer{
+    text-align:center;
+    padding:40px 20px;
+    font-size:14px;
+    color:#888;
+}
+
 </style>
 </head>
-
 <body>
 
-<!-- NAV -->
-<nav>
-<a href="#home">Home</a>
-<a href="#quotes">Notes</a>
-<a href="#story">Our Story</a>
-<a href="#love-advice">Love Advice</a>
-<a href="javascript:void(0)" onclick="toggleAbout()">About Me</a>
-</nav>
-
-<!-- HERO -->
-<section class="hero" id="home">
-<div class="hero-content">
-<h1>Some connections don’t need explanations.<br>They just exist… stronger than distance,<br>deeper than words, and quieter than the world.</h1>
-<div class="signature">Monu Rajput</div>
+<div class="hero">
+    <h1>Monu Rajput</h1>
+    <div class="subtitle">Writer of Silent Realities</div>
+    <div class="readers">92K+ Readers Since 2025</div>
 </div>
+
+<section>
+<h2>Editor’s Note — 2026</h2>
+<p>
+This space began in 2025 as a quiet place to understand emotions I could not always explain aloud.
+Over time, it became documentation of growth — in love, distance, and self-respect.
+Every piece here represents a phase.
+Some were written in confusion. Some in clarity.
+But all of them are honest.
+</p>
+<p>— Monu Rajput</p>
 </section>
 
-<!-- QUOTES -->
-<section id="quotes">
-<h2>My Notes</h2>
-<div class="quote-box">I wasn’t perfect, but I was real — and sometimes real is what hurts the most.<br>— Monu</div>
-<div class="quote-box">I didn’t lose anyone, I just saw who was never truly mine.<br>— Monu</div>
-<div class="quote-box">Some nights I don’t miss a person, I miss the version of me who believed everything would stay.<br>— Monu</div>
-<div class="quote-box">Love sometimes promises, but life teaches lessons.<br>— Monu</div>
-<div class="quote-box">Distance doesn’t kill feelings, misunderstandings do.<br>— Monu</div>
-<div class="quote-box">Sometimes letting go is the only way to hold on.<br>— Monu</div>
-<div class="quote-box" style="opacity:0.7; font-style:italic; margin-top:30px;">Coming Soon… ❤️</div>
-</section>
+<section>
+<h2>Reflections</h2>
 
-<!-- OUR STORY -->
-<section class="fade-section" id="story">
-<h2>Our Story</h2>
-<div class="mehndi-container">
-<img src="mehndi.jpg" class="mehndi-photo" alt="Isa Mehndi photo">
-<div class="mehndi-text">
-तुमने उसे एक जश्न कहा,<br>
-मैंने उसे एक सीख माना।<br>
-उस दिन समझ आया —<br>
-हर वो इंसान जो हमारी कहानी में मुस्कुराता है,<br>
-वो आख़िरी पन्ने तक साथ रहने के लिए नहीं होता।<br>
-— Monu
-</div>
+<div class="card">
+Not every ending is a failure. Some are redirections in disguise.
 </div>
 
-<div class="quote-box" style="text-align:left; white-space:pre-line;">
-एक समय ऐसा आया जब मुझे महसूस होने लगा कि वो दूर जाना चाहती है।  
-हमारे बीच की हर छोटी बात अब बड़ी दूरी की तरह लगने लगी थी।  
-पहले जहाँ हर छोटी खुशी और चिंता शेयर होती थी,  
-वहाँ अब सिर्फ अनकहे सवाल और खामोशी बची थी।  
-
-मैंने कोशिश की पकड़ कर रखने की,  
-और उसने धीरे-धीरे खुद को मेरी पहुँच से दूर कर लिया।  
-
-उसने कभी साफ नहीं कहा “जाओ”,  
-लेकिन उसके फैसलों में वो दूरी और चुप्पी साफ दिख रही थी।  
-
-मैंने उसे रोका नहीं, क्योंकि कभी-कभी प्यार का मतलब पकड़ कर रखना नहीं,  
-इज़्ज़त से जाने देना भी होता है।  
-
-वो मुझे छोड़ कर नहीं गई,  
-वो सिर्फ खुद को चुन कर गई।  
-
-और शायद यही असली जिंदगी है —  
-हर कहानी में विलेन नहीं होता,  
-कभी-कभी बस दो लोग अलग रास्ते चुन लेते हैं।
+<div class="card">
+Silence is not weakness. It is often self-respect choosing peace.
 </div>
-</section>
 
-<!-- LOVE ADVICE -->
-<section class="fade-section" id="love-advice">
-<h2>Love Advice</h2>
-
-<div class="advice-container">
-<div class="advice-page active">Advice 1: प्यार में कभी भी किसी को बदलने की कोशिश मत करो।<br>— Monu</div>
-<div class="advice-page">Advice 2: सच्चा प्यार विश्वास और समझदारी से बनता है।<br>— Monu</div>
-<div class="advice-page">Advice 3: प्यार कभी जल्दी में नहीं होना चाहिए, समय सब कुछ दिखाता है।<br>— Monu</div>
-<div class="advice-buttons">
-<button onclick="prevAdvice()">Previous</button>
-<button onclick="nextAdvice()">Next</button>
+<div class="card">
+Love doesn’t fail. Expectations without understanding do.
 </div>
+
+<div class="card">
+Sometimes distance is not rejection. It is protection.
+</div>
+
+<div class="card">
+Emotional maturity begins where ego ends.
+</div>
+
+<div class="card">
+Closure is not always given. Sometimes you create it yourself.
 </div>
 
 </section>
 
-<!-- ABOUT -->
-<section class="about" id="about">
-<img src="yourphoto.jpg" class="profile-photo" alt="Monu Rajput profile photo">
-<h2>Monu Rajput</h2>
-<p>A writer of silent emotions.<br>Love is not loud — it is steady, deep, and real.</p>
+<section>
+<h2>Selected Essay — 2026 Edition</h2>
+
+<div class="card">
+<h3>The Day I Understood Letting Go</h3>
+<p>
+There comes a moment in love when holding on becomes heavier than letting go.
+That moment does not arrive loudly.
+It arrives quietly, after repeated disappointments.
+</p>
+
+<div class="quote">
+“Love should feel steady, not exhausting.”
+</div>
+
+<p>
+Sometimes walking away is not weakness.
+It is clarity choosing peace.
+</p>
+</div>
+
 </section>
+
+<section>
+<h2>Understanding Modern Love — Series</h2>
+
+<div class="card">
+<h3>Part 1 — Attachment</h3>
+We confuse attachment with love. One is fear of losing. The other is freedom to stay.
+</div>
+
+<div class="card">
+<h3>Part 2 — Distance</h3>
+Distance tests intention. Not feelings.
+</div>
+
+<div class="card">
+<h3>Part 3 — Clarity</h3>
+Clarity hurts at first. But confusion destroys slowly.
+</div>
+
+</section>
+
+<section>
+<h2>Philosophy</h2>
+
+<div class="card">
+Love is not about possession. It is about mutual growth.
+</div>
+
+<div class="card">
+When respect fades, love quietly follows.
+</div>
+
+<div class="card">
+Distance does not break strong bonds. Ego does.
+</div>
+
+</section>
+
+<section>
+<h2>About</h2>
+<p>
+Monu Rajput is an independent writer exploring themes of modern love, emotional maturity, and silent resilience.
+His work reflects the inner conflicts of attachment, growth, and self-respect in relationships.
+He writes not to impress — but to understand.
+</p>
+
+<p>Writing since 2025. Evolving quietly with every experience.</p>
+</section>
+
+<section>
+<h2>Archive</h2>
+
+<div class="card">
+<strong>2025 — Beginnings</strong><br>
+Early reflections on love and emotional awareness.
+</div>
+
+<div class="card">
+<strong>2026 — Growth & Clarity</strong><br>
+Deeper essays on maturity, detachment, and strength.
+</div>
+
+</section>
+
+<footer>
+© 2025–2026 Monu Rajput<br>
+Version 2.1 — Updated February 2026<br><br>
+<i>Built quietly. Evolving constantly.</i>
+</footer>
 
 <script>
-function toggleAbout() {
-    var aboutSection = document.getElementById("about");
-    aboutSection.classList.toggle("active");
-    if (aboutSection.classList.contains("active")) {
-        aboutSection.scrollIntoView({ behavior: "smooth" });
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
+      sec.classList.add("visible");
     }
-}
-
-// Navbar shrink + fade effect
-window.addEventListener("scroll", function(){
-    var nav = document.querySelector("nav");
-    if(window.scrollY > 50){ nav.classList.add("shrink"); }
-    else{ nav.classList.remove("shrink"); }
-
-    var fadeSections = document.querySelectorAll(".fade-section");
-    fadeSections.forEach(function(section){
-        var sectionTop = section.getBoundingClientRect().top;
-        var screenHeight = window.innerHeight;
-        if(sectionTop < screenHeight - 100){ section.classList.add("show"); }
-    });
+  });
 });
-
-// Love Advice page navigation
-var currentAdvice = 0;
-var advicePages = document.querySelectorAll('.advice-page');
-
-function showAdvice(index){
-    advicePages.forEach(function(page, i){
-        page.classList.remove('active');
-        if(i === index) page.classList.add('active');
-    });
-}
-
-function nextAdvice(){
-    currentAdvice++;
-    if(currentAdvice >= advicePages.length) currentAdvice = 0;
-    showAdvice(currentAdvice);
-}
-
-function prevAdvice(){
-    currentAdvice--;
-    if(currentAdvice < 0) currentAdvice = advicePages.length - 1;
-    showAdvice(currentAdvice);
-}
 </script>
 
 </body>
