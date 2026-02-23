@@ -3,172 +3,195 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Monu Rajput | Writer of Silent Realities</title>
+<title>Monu Rajput | Silent Realities</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
 
+html{
+  scroll-behavior:smooth;
+}
+
 body{
-    margin:0;
-    background:#0d0d0d;
-    color:#eaeaea;
-    font-family:'Lora', serif;
-    line-height:1.8;
+  margin:0;
+  background:#0d0d0d;
+  color:#eaeaea;
+  font-family:'Lora', serif;
+  line-height:1.8;
 }
 
 h1,h2,h3{
-    font-family:'Playfair Display', serif;
-    color:#c9a227;
+  font-family:'Playfair Display', serif;
+  color:#c9a227;
 }
 
 section{
-    padding:70px 20px;
-    max-width:900px;
-    margin:auto;
-    border-bottom:1px solid rgba(201,162,39,0.2);
+  padding:70px 20px;
+  max-width:900px;
+  margin:auto;
+  border-bottom:1px solid rgba(201,162,39,0.2);
+}
+
+/* NAVBAR */
+
+.navbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(0,0,0,0.85);
+  text-align:center;
+  padding:15px 0;
+  z-index:1000;
+}
+
+.navbar a{
+  color:#eaeaea;
+  text-decoration:none;
+  margin:0 25px;
+  font-family:'Playfair Display', serif;
+  letter-spacing:1px;
+  transition:0.3s;
+}
+
+.navbar a:hover{
+  color:#c9a227;
 }
 
 /* HERO */
 
 .hero{
-    position:relative;
-    height:100vh;
-    background:url('hero.jpg') center/cover no-repeat;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
+  position:relative;
+  height:100vh;
+  background:url('hero.jpg') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
 }
 
 .hero::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,0.6);
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.6);
 }
 
 .hero-content{
-    position:relative;
-    z-index:2;
+  position:relative;
+  z-index:2;
 }
 
 .hero h1{
-    font-size:48px;
-    margin-bottom:10px;
+  font-size:48px;
+  margin-bottom:10px;
 }
 
 .hero p{
-    font-size:18px;
-    letter-spacing:2px;
-    color:#ccc;
+  font-size:18px;
+  letter-spacing:2px;
+  color:#ccc;
 }
 
 .readers{
-    margin-top:15px;
-    font-size:14px;
-    letter-spacing:2px;
-    opacity:0.8;
+  margin-top:15px;
+  font-size:14px;
+  letter-spacing:2px;
+  opacity:0.8;
 }
 
-/* MEHNDI SECTION */
+/* MEHNDI */
 
 .mehndi{
-    position:relative;
-    height:90vh;
-    background:url('mehndi.jpg') center/cover no-repeat;
-    display:flex;
-    align-items:flex-end;
-    justify-content:center;
-    text-align:center;
+  position:relative;
+  height:90vh;
+  background:url('mehndi.jpg') center/cover no-repeat;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  text-align:center;
 }
 
 .mehndi::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,0.55);
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.55);
 }
 
 .mehndi-text{
-    position:relative;
-    z-index:2;
-    max-width:800px;
-    margin-bottom:80px;
-    font-size:22px;
-    line-height:1.6;
-}
-
-.mehndi-text span{
-    display:block;
+  position:relative;
+  z-index:2;
+  max-width:800px;
+  margin-bottom:80px;
+  font-size:22px;
+  line-height:1.6;
 }
 
 .signature{
-    margin-top:15px;
-    color:#c9a227;
-    font-size:18px;
+  margin-top:15px;
+  color:#c9a227;
+  font-size:18px;
 }
 
 /* CARD */
 
 .card{
-    border:1px solid rgba(201,162,39,0.3);
-    padding:25px;
-    margin-bottom:30px;
-    border-radius:8px;
-    background:#111;
+  border:1px solid rgba(201,162,39,0.3);
+  padding:25px;
+  margin-bottom:30px;
+  border-radius:8px;
+  background:#111;
 }
 
 .quote{
-    border-left:3px solid #c9a227;
-    padding-left:15px;
-    margin:20px 0;
-    font-style:italic;
+  border-left:3px solid #c9a227;
+  padding-left:15px;
+  margin:20px 0;
+  font-style:italic;
 }
 
 footer{
-    text-align:center;
-    padding:40px 20px;
-    font-size:14px;
-    color:#888;
+  text-align:center;
+  padding:40px 20px;
+  font-size:14px;
+  color:#888;
 }
 
 </style>
 </head>
 <body>
 
+<!-- NAVBAR -->
+<div class="navbar">
+  <a href="#reflections">Quotes</a>
+  <a href="#essay">Our Story</a>
+  <a href="#hindi">Hindi</a>
+  <a href="#about">About</a>
+</div>
+
 <!-- HERO -->
 <div class="hero">
-    <div class="hero-content">
-        <h1>Monu Rajput</h1>
-        <p>Writer of Silent Realities</p>
-        <div class="readers">92K+ Readers Since 2025</div>
-    </div>
+  <div class="hero-content">
+    <h1>Monu Rajput</h1>
+    <p>Writer of Silent Realities</p>
+    <div class="readers">92K+ Readers Since 2025</div>
+  </div>
 </div>
 
 <!-- MEHNDI -->
 <div class="mehndi">
-    <div class="mehndi-text">
-        <span>तुमने उसे एक जश्न कहा,</span>
-        <span>मैंने उसे एक सीख माना।</span><br>
-        <span>उस दिन समझ आया —</span>
-        <span>हर वो इंसान जो हमारी कहानी में मुस्कुराता है,</span>
-        <span>वो आख़िरी पन्ने तक साथ रहने के लिए नहीं होता।</span>
-        <div class="signature">— Monu Rajput</div>
-    </div>
+  <div class="mehndi-text">
+    तुमने उसे एक जश्न कहा,<br>
+    मैंने उसे एक सीख माना।<br><br>
+    उस दिन समझ आया —<br>
+    हर वो इंसान जो हमारी कहानी में मुस्कुराता है,<br>
+    वो आख़िरी पन्ने तक साथ रहने के लिए नहीं होता।
+    <div class="signature">— Monu Rajput</div>
+  </div>
 </div>
 
-<section>
-<h2>Editor’s Note — 2026</h2>
-<p>
-This space began in 2025 as a quiet place to understand emotions I could not always explain aloud.
-Over time, it became documentation of growth — in love, distance, and self-respect.
-Every piece here represents a phase. Some were written in confusion. Some in clarity.
-But all of them are honest.
-</p>
-</section>
-
-<section>
+<section id="reflections">
 <h2>Reflections</h2>
 
 <div class="card">Not every ending is a failure. Some are redirections in disguise.</div>
@@ -176,22 +199,20 @@ But all of them are honest.
 <div class="card">Love doesn’t fail. Expectations without understanding do.</div>
 <div class="card">Sometimes distance is not rejection. It is protection.</div>
 <div class="card">Emotional maturity begins where ego ends.</div>
-<div class="card">Closure is not always given. Sometimes you create it yourself.</div>
 
 </section>
 
-<section>
-<h2>Selected Essay — 2026 Edition</h2>
+<section id="essay">
+<h2>The Day I Understood Letting Go</h2>
 
 <div class="card">
-<h3>The Day I Understood Letting Go</h3>
 <p>
 There comes a moment in love when holding on becomes heavier than letting go.
 That moment arrives quietly, after repeated disappointments.
 </p>
 
 <div class="quote">
-“Love should feel steady, not exhausting.”
+Love should feel steady, not exhausting.
 </div>
 
 <p>
@@ -202,55 +223,51 @@ It is clarity choosing peace.
 
 </section>
 
-<section>
-<h2>Understanding Modern Love — Series</h2>
+<section id="hindi">
+<h2>प्रेम और स्वाभिमान — हिंदी श्रृंखला</h2>
 
 <div class="card">
-<h3>Part 1 — Attachment</h3>
-We confuse attachment with love. One is fear of losing. The other is freedom to stay.
+<h3>Part 1 — दूरी क्यों ज़रूरी होती है</h3>
+दूरी हमेशा अंत नहीं होती। कभी-कभी वही रिश्ते की सच्चाई दिखाती है।
+दूरी में पता चलता है कि रिश्ता ज़रूरत था या चुनाव।
+<strong>दूरी कमजोरी नहीं, एक परीक्षा है।</strong>
 </div>
 
 <div class="card">
-<h3>Part 2 — Distance</h3>
-Distance tests intention. Not feelings.
+<h3>Part 2 — जब प्यार आत्मसम्मान से टकराता है</h3>
+दिल कहता है — सह लो।
+आत्मसम्मान कहता है — बस।
+<strong>आत्मसम्मान खोकर पाया गया प्यार टिकाऊ नहीं होता।</strong>
 </div>
 
 <div class="card">
-<h3>Part 3 — Clarity</h3>
-Clarity hurts at first. But confusion destroys slowly.
+<h3>Part 3 — छोड़ना कब सही होता है</h3>
+अगर हर खुशी में डर छुपा हो,
+तो रुककर सोचो।
+<strong>कुछ अंत असफलता नहीं, आत्मरक्षा होते हैं।</strong>
 </div>
 
 </section>
 
-<section>
+<section id="about">
 <h2>About</h2>
 <p>
-Monu Rajput is an independent writer exploring themes of modern love, emotional maturity, and silent resilience.
-He writes not to impress — but to understand.
+Monu Rajput is an independent writer exploring modern love,
+emotional maturity, and silent resilience.
+Writing since 2025. Evolving quietly with every experience.
 </p>
-<p>Writing since 2025. Evolving quietly with every experience.</p>
 </section>
 
 <section>
 <h2>Archive</h2>
-
-<div class="card">
-<strong>2025 — Beginnings</strong><br>
-Early reflections on love and emotional awareness.
-</div>
-
-<div class="card">
-<strong>2026 — Growth & Clarity</strong><br>
-Deeper essays on maturity, detachment, and strength.
-</div>
-
+<div class="card"><strong>2025 — Beginnings</strong></div>
+<div class="card"><strong>2026 — Growth & Clarity</strong></div>
 </section>
 
 <footer>
 © 2025–2026 Monu Rajput<br>
-Version 2.1 — Updated February 2026<br><br>
-<i>Built quietly. Evolving constantly.</i>
+Built quietly. Evolving constantly.
 </footer>
 
 </body>
-    </html>
+                                                                                       </html>
