@@ -5,111 +5,60 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Monu Rajput - Notes & Stories</title>
 
-<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
-<meta name="description" content="Monu Rajput website: real love stories, emotional quotes, mehndi photos, and personal journey.">
-
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
-body{
-    font-family:'Poppins',sans-serif;
-    background:#000;
-    color:white;
-}
+*{margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth;}
+body{font-family:'Poppins',sans-serif; background:#000; color:white;}
 
 /* NAVBAR */
-nav{
-    position:fixed;
-    width:100%;
-    top:0;
-    display:flex;
-    justify-content:center;
-    padding:25px 0;
-    z-index:1000;
-    background:rgba(0,0,0,0.5);
-    backdrop-filter:blur(8px);
-    transition:0.4s;
-}
-nav.shrink{ padding:15px 0; background:rgba(0,0,0,0.9); }
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 25px;
-    font-size:16px;
-    letter-spacing:1px;
-    position:relative;
-    transition:0.3s;
-}
-nav a::after{
-    content:"";
-    position:absolute;
-    width:0;
-    height:2px;
-    bottom:-5px;
-    left:0;
-    background:#ff4d6d;
-    transition:0.4s;
-}
-nav a:hover{ color:#ff4d6d; }
-nav a:hover::after{ width:100%; }
+nav{position:fixed; width:100%; top:0; display:flex; justify-content:center; padding:25px 0; z-index:1000; background:rgba(0,0,0,0.5); backdrop-filter:blur(8px); transition:0.4s;}
+nav.shrink{padding:15px 0; background:rgba(0,0,0,0.9);}
+nav a{color:white; text-decoration:none; margin:0 25px; font-size:16px; letter-spacing:1px; position:relative; transition:0.3s;}
+nav a::after{content:""; position:absolute; width:0; height:2px; bottom:-5px; left:0; background:#ff4d6d; transition:0.4s;}
+nav a:hover{color:#ff4d6d;}
+nav a:hover::after{width:100%;}
 
 /* HERO */
-.hero{
-    height:100vh;
-    background:url('hero.jpg') no-repeat center center/cover;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    position:relative;
-}
-.hero::after{
-    content:"";
-    position:absolute;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.6);
-}
-.hero-content{ position:relative; z-index:2; animation:fadeIn 2s ease; }
-.hero h1{ font-weight:300; font-size:38px; line-height:1.6; max-width:800px; }
-.signature{ font-family:'Great Vibes',cursive; font-size:55px; margin-top:25px; color:#ffccd5; }
+.hero{height:100vh; background:url('hero.jpg') no-repeat center center/cover; display:flex; justify-content:center; align-items:center; text-align:center; position:relative;}
+.hero::after{content:""; position:absolute; width:100%; height:100%; background:rgba(0,0,0,0.6);}
+.hero-content{position:relative; z-index:2; animation:fadeIn 2s ease;}
+.hero h1{font-weight:300; font-size:38px; line-height:1.6; max-width:800px;}
+.signature{font-family:'Great Vibes',cursive; font-size:55px; margin-top:25px; color:#ffccd5;}
 
 /* SECTIONS */
-section{ padding:100px 20px; text-align:center; }
-h2{ font-size:35px; margin-bottom:40px; }
-.quote-box{ max-width:700px; margin:20px auto; font-size:18px; line-height:1.8; opacity:0.85; }
+section{padding:100px 20px; text-align:center;}
+h2{font-size:35px; margin-bottom:40px;}
+.quote-box{max-width:700px; margin:20px auto; font-size:18px; line-height:1.8; opacity:0.85;}
 
 /* STORY FADE */
-.fade-section{ opacity:0; transform:translateY(40px); transition:1s ease; }
-.fade-section.show{ opacity:1; transform:translateY(0); }
+.fade-section{opacity:0; transform:translateY(40px); transition:1s ease;}
+.fade-section.show{opacity:1; transform:translateY(0);}
 
 /* ABOUT SLIDE */
-.about{ max-height:0; overflow:hidden; transition:max-height 0.8s ease; background:#111; }
-.about.active{ max-height:1000px; padding:100px 20px; }
-.profile-photo{ width:160px; height:160px; border-radius:50%; object-fit:cover; margin-bottom:20px; border:3px solid #ff4d6d; }
+.about{max-height:0; overflow:hidden; transition:max-height 0.8s ease; background:#111;}
+.about.active{max-height:1000px; padding:100px 20px;}
+.profile-photo{width:160px; height:160px; border-radius:50%; object-fit:cover; margin-bottom:20px; border:3px solid #ff4d6d;}
 
-/* MEHNDI PHOTO */
-.mehndi-photo{ width:300px; border-radius:15px; margin:20px auto; display:block; border:3px solid #ff4d6d; }
-
-/* MEHNDI LINE */
-.mehndi-line{
-    max-width:700px;
-    margin:20px auto 0 auto;
-    font-size:18px;
-    line-height:1.8;
-    font-style:italic;
-    opacity:0.8;
-    text-align:center;
+/* MEHNDI PHOTO CONTAINER */
+.mehndi-container{position:relative; display:inline-block; margin:20px auto; width:300px;}
+.mehndi-photo{width:100%; border-radius:15px; border:3px solid #ff4d6d; display:block;}
+.mehndi-text{
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+    color:white; text-align:center; font-size:18px; line-height:1.6;
+    font-style:italic; opacity:0.85; text-shadow: 2px 2px 8px #000;
 }
 
+/* LOVE ADVICE PAGES */
+.advice-container{position:relative; max-width:700px; margin:30px auto; background:#111; padding:20px; border-radius:10px; min-height:120px;}
+.advice-page{display:none; font-size:18px; line-height:1.8; opacity:0.9;}
+.advice-page.active{display:block;}
+.advice-buttons{margin-top:15px;}
+.advice-buttons button{background:#ff4d6d; border:none; color:white; padding:8px 18px; margin:0 10px; cursor:pointer; border-radius:5px; font-weight:500; transition:0.3s;}
+.advice-buttons button:hover{background:#ffccd5; color:#000;}
+
 /* ANIMATION */
-@keyframes fadeIn{ from{opacity:0; transform:translateY(20px);} to{opacity:1; transform:translateY(0);} }
+@keyframes fadeIn{from{opacity:0; transform:translateY(20px);} to{opacity:1; transform:translateY(0);}}
 </style>
 </head>
 
@@ -127,11 +76,7 @@ h2{ font-size:35px; margin-bottom:40px; }
 <!-- HERO -->
 <section class="hero" id="home">
 <div class="hero-content">
-<h1>
-Some connections don’t need explanations.<br>
-They just exist… stronger than distance,<br>
-deeper than words, and quieter than the world.
-</h1>
+<h1>Some connections don’t need explanations.<br>They just exist… stronger than distance,<br>deeper than words, and quieter than the world.</h1>
 <div class="signature">Monu Rajput</div>
 </div>
 </section>
@@ -151,8 +96,9 @@ deeper than words, and quieter than the world.
 <!-- OUR STORY -->
 <section class="fade-section" id="story">
 <h2>Our Story</h2>
-
-<div class="mehndi-line">
+<div class="mehndi-container">
+<img src="mehndi.jpg" class="mehndi-photo" alt="Isa Mehndi photo">
+<div class="mehndi-text">
 तुमने उसे एक जश्न कहा,<br>
 मैंने उसे एक सीख माना।<br>
 उस दिन समझ आया —<br>
@@ -160,8 +106,7 @@ deeper than words, and quieter than the world.
 वो आख़िरी पन्ने तक साथ रहने के लिए नहीं होता।<br>
 — Monu
 </div>
-
-<img src="mehndi.jpg" class="mehndi-photo" alt="Isa Mehndi photo">
+</div>
 
 <div class="quote-box" style="text-align:left; white-space:pre-line;">
 एक समय ऐसा आया जब मुझे महसूस होने लगा कि वो दूर जाना चाहती है।  
@@ -190,7 +135,17 @@ deeper than words, and quieter than the world.
 <!-- LOVE ADVICE -->
 <section class="fade-section" id="love-advice">
 <h2>Love Advice</h2>
-<div class="quote-box" style="opacity:0.7; font-style:italic;">Coming Soon… ❤️</div>
+
+<div class="advice-container">
+<div class="advice-page active">Advice 1: प्यार में कभी भी किसी को बदलने की कोशिश मत करो।<br>— Monu</div>
+<div class="advice-page">Advice 2: सच्चा प्यार विश्वास और समझदारी से बनता है।<br>— Monu</div>
+<div class="advice-page">Advice 3: प्यार कभी जल्दी में नहीं होना चाहिए, समय सब कुछ दिखाता है।<br>— Monu</div>
+<div class="advice-buttons">
+<button onclick="prevAdvice()">Previous</button>
+<button onclick="nextAdvice()">Next</button>
+</div>
+</div>
+
 </section>
 
 <!-- ABOUT -->
@@ -209,6 +164,7 @@ function toggleAbout() {
     }
 }
 
+// Navbar shrink + fade effect
 window.addEventListener("scroll", function(){
     var nav = document.querySelector("nav");
     if(window.scrollY > 50){ nav.classList.add("shrink"); }
@@ -221,6 +177,29 @@ window.addEventListener("scroll", function(){
         if(sectionTop < screenHeight - 100){ section.classList.add("show"); }
     });
 });
+
+// Love Advice page navigation
+var currentAdvice = 0;
+var advicePages = document.querySelectorAll('.advice-page');
+
+function showAdvice(index){
+    advicePages.forEach(function(page, i){
+        page.classList.remove('active');
+        if(i === index) page.classList.add('active');
+    });
+}
+
+function nextAdvice(){
+    currentAdvice++;
+    if(currentAdvice >= advicePages.length) currentAdvice = 0;
+    showAdvice(currentAdvice);
+}
+
+function prevAdvice(){
+    currentAdvice--;
+    if(currentAdvice < 0) currentAdvice = advicePages.length - 1;
+    showAdvice(currentAdvice);
+}
 </script>
 
 </body>
