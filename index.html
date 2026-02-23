@@ -23,42 +23,93 @@ h1,h2,h3{
 }
 
 section{
-    padding:60px 20px;
+    padding:70px 20px;
     max-width:900px;
     margin:auto;
     border-bottom:1px solid rgba(201,162,39,0.2);
-    opacity:0;
-    transform:translateY(30px);
-    transition:all 1s ease;
 }
 
-section.visible{
-    opacity:1;
-    transform:translateY(0);
-}
+/* HERO */
 
 .hero{
+    position:relative;
+    height:100vh;
+    background:url('hero.jpg') center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     text-align:center;
-    padding:100px 20px;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.6);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
 }
 
 .hero h1{
-    font-size:42px;
+    font-size:48px;
     margin-bottom:10px;
 }
 
-.subtitle{
+.hero p{
     font-size:18px;
-    color:#aaa;
     letter-spacing:2px;
+    color:#ccc;
 }
 
 .readers{
-    margin-top:20px;
+    margin-top:15px;
     font-size:14px;
     letter-spacing:2px;
     opacity:0.8;
 }
+
+/* MEHNDI SECTION */
+
+.mehndi{
+    position:relative;
+    height:90vh;
+    background:url('mehndi.jpg') center/cover no-repeat;
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    text-align:center;
+}
+
+.mehndi::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.55);
+}
+
+.mehndi-text{
+    position:relative;
+    z-index:2;
+    max-width:800px;
+    margin-bottom:80px;
+    font-size:22px;
+    line-height:1.6;
+}
+
+.mehndi-text span{
+    display:block;
+}
+
+.signature{
+    margin-top:15px;
+    color:#c9a227;
+    font-size:18px;
+}
+
+/* CARD */
 
 .card{
     border:1px solid rgba(201,162,39,0.3);
@@ -86,10 +137,25 @@ footer{
 </head>
 <body>
 
+<!-- HERO -->
 <div class="hero">
-    <h1>Monu Rajput</h1>
-    <div class="subtitle">Writer of Silent Realities</div>
-    <div class="readers">92K+ Readers Since 2025</div>
+    <div class="hero-content">
+        <h1>Monu Rajput</h1>
+        <p>Writer of Silent Realities</p>
+        <div class="readers">92K+ Readers Since 2025</div>
+    </div>
+</div>
+
+<!-- MEHNDI -->
+<div class="mehndi">
+    <div class="mehndi-text">
+        <span>तुमने उसे एक जश्न कहा,</span>
+        <span>मैंने उसे एक सीख माना।</span><br>
+        <span>उस दिन समझ आया —</span>
+        <span>हर वो इंसान जो हमारी कहानी में मुस्कुराता है,</span>
+        <span>वो आख़िरी पन्ने तक साथ रहने के लिए नहीं होता।</span>
+        <div class="signature">— Monu Rajput</div>
+    </div>
 </div>
 
 <section>
@@ -97,39 +163,20 @@ footer{
 <p>
 This space began in 2025 as a quiet place to understand emotions I could not always explain aloud.
 Over time, it became documentation of growth — in love, distance, and self-respect.
-Every piece here represents a phase.
-Some were written in confusion. Some in clarity.
+Every piece here represents a phase. Some were written in confusion. Some in clarity.
 But all of them are honest.
 </p>
-<p>— Monu Rajput</p>
 </section>
 
 <section>
 <h2>Reflections</h2>
 
-<div class="card">
-Not every ending is a failure. Some are redirections in disguise.
-</div>
-
-<div class="card">
-Silence is not weakness. It is often self-respect choosing peace.
-</div>
-
-<div class="card">
-Love doesn’t fail. Expectations without understanding do.
-</div>
-
-<div class="card">
-Sometimes distance is not rejection. It is protection.
-</div>
-
-<div class="card">
-Emotional maturity begins where ego ends.
-</div>
-
-<div class="card">
-Closure is not always given. Sometimes you create it yourself.
-</div>
+<div class="card">Not every ending is a failure. Some are redirections in disguise.</div>
+<div class="card">Silence is not weakness. It is often self-respect choosing peace.</div>
+<div class="card">Love doesn’t fail. Expectations without understanding do.</div>
+<div class="card">Sometimes distance is not rejection. It is protection.</div>
+<div class="card">Emotional maturity begins where ego ends.</div>
+<div class="card">Closure is not always given. Sometimes you create it yourself.</div>
 
 </section>
 
@@ -140,8 +187,7 @@ Closure is not always given. Sometimes you create it yourself.
 <h3>The Day I Understood Letting Go</h3>
 <p>
 There comes a moment in love when holding on becomes heavier than letting go.
-That moment does not arrive loudly.
-It arrives quietly, after repeated disappointments.
+That moment arrives quietly, after repeated disappointments.
 </p>
 
 <div class="quote">
@@ -177,30 +223,11 @@ Clarity hurts at first. But confusion destroys slowly.
 </section>
 
 <section>
-<h2>Philosophy</h2>
-
-<div class="card">
-Love is not about possession. It is about mutual growth.
-</div>
-
-<div class="card">
-When respect fades, love quietly follows.
-</div>
-
-<div class="card">
-Distance does not break strong bonds. Ego does.
-</div>
-
-</section>
-
-<section>
 <h2>About</h2>
 <p>
 Monu Rajput is an independent writer exploring themes of modern love, emotional maturity, and silent resilience.
-His work reflects the inner conflicts of attachment, growth, and self-respect in relationships.
 He writes not to impress — but to understand.
 </p>
-
 <p>Writing since 2025. Evolving quietly with every experience.</p>
 </section>
 
@@ -224,19 +251,6 @@ Deeper essays on maturity, detachment, and strength.
 Version 2.1 — Updated February 2026<br><br>
 <i>Built quietly. Evolving constantly.</i>
 </footer>
-
-<script>
-const sections = document.querySelectorAll("section");
-
-window.addEventListener("scroll", () => {
-  sections.forEach(sec => {
-    const top = sec.getBoundingClientRect().top;
-    if(top < window.innerHeight - 100){
-      sec.classList.add("visible");
-    }
-  });
-});
-</script>
 
 </body>
     </html>
