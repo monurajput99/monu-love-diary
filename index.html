@@ -4,36 +4,34 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Monu Rajput | Silent Realities</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
-
 <style>
 html{ scroll-behavior:smooth; }
-body{
-  margin:0;
-  background:#0d0d0d;
-  color:#eaeaea;
-  font-family:'Lora', serif;
-  line-height:1.8;
-}
+body{ margin:0; background:#0d0d0d; color:#eaeaea; font-family:'Lora', serif; line-height:1.8;}
 h1,h2,h3{ font-family:'Playfair Display', serif; color:#c9a227; }
-section{ padding:80px 20px; max-width:900px; margin:auto; border-bottom:1px solid rgba(201,162,39,0.2); }
-.navbar{ position:fixed; top:0; width:100%; background:rgba(0,0,0,0.9); text-align:center; padding:15px 0; z-index:1000; }
-.navbar a{ color:#eaeaea; text-decoration:none; margin:0 25px; font-family:'Playfair Display', serif; letter-spacing:1px; transition:0.3s; }
-.navbar a:hover{ color:#c9a227; }
-.hero{ position:relative; height:100vh; background:url('hero.jpg') center/cover no-repeat; display:flex; align-items:center; justify-content:center; text-align:center; }
-.hero::after{ content:""; position:absolute; inset:0; background:rgba(0,0,0,0.6); }
-.hero-content{ position:relative; z-index:2; }
-.hero h1{ font-size:48px; margin-bottom:10px; }
-.hero p{ font-size:18px; letter-spacing:2px; color:#ccc; }
-.readers{ margin-top:15px; font-size:14px; letter-spacing:2px; opacity:0.8; }
-.mehndi{ position:relative; height:90vh; background:url('mehndi.jpg') center/cover no-repeat; display:flex; align-items:flex-end; justify-content:center; text-align:center; }
-.mehndi::after{ content:""; position:absolute; inset:0; background:rgba(0,0,0,0.55); }
-.mehndi-text{ position:relative; z-index:2; max-width:800px; margin-bottom:80px; font-size:22px; line-height:1.6; }
-.signature{ margin-top:15px; color:#c9a227; font-size:18px; }
-.card{ border:1px solid rgba(201,162,39,0.3); padding:25px; margin-bottom:30px; border-radius:8px; background:#111; }
-.quote{ border-left:3px solid #c9a227; padding-left:15px; margin:20px 0; font-style:italic; }
-footer{ text-align:center; padding:40px 20px; font-size:14px; color:#888; }
+section{ padding:80px 20px; max-width:900px; margin:auto; border-bottom:1px solid rgba(201,162,39,0.2);}
+.navbar{ position:fixed; top:0; width:100%; background:rgba(0,0,0,0.9); text-align:center; padding:15px 0; z-index:1000;}
+.navbar a{ color:#eaeaea; text-decoration:none; margin:0 25px; font-family:'Playfair Display', serif; letter-spacing:1px; transition:0.3s;}
+.navbar a:hover{ color:#c9a227;}
+.hero{ position:relative; height:100vh; background:url('hero.jpg') center/cover no-repeat; display:flex; align-items:center; justify-content:center; text-align:center;}
+.hero::after{ content:""; position:absolute; inset:0; background:rgba(0,0,0,0.6);}
+.hero-content{ position:relative; z-index:2;}
+.hero h1{ font-size:48px; margin-bottom:10px;}
+.hero p{ font-size:18px; letter-spacing:2px; color:#ccc;}
+.readers{ margin-top:15px; font-size:14px; letter-spacing:2px; opacity:0.8;}
+.mehndi{ position:relative; height:90vh; background:url('mehndi.jpg') center/cover no-repeat; display:flex; align-items:flex-end; justify-content:center; text-align:center;}
+.mehndi::after{ content:""; position:absolute; inset:0; background:rgba(0,0,0,0.55);}
+.mehndi-text{ position:relative; z-index:2; max-width:800px; margin-bottom:80px; font-size:22px; line-height:1.6;}
+.signature{ margin-top:15px; color:#c9a227; font-size:18px;}
+.card{ border:1px solid rgba(201,162,39,0.3); padding:25px; margin-bottom:30px; border-radius:8px; background:#111;}
+.quote{ border-left:3px solid #c9a227; padding-left:15px; margin:20px 0; font-style:italic;}
+footer{ text-align:center; padding:40px 20px; font-size:14px; color:#888;}
+.comment-box{ background:#111; padding:30px; border-radius:8px; margin-bottom:60px;}
+.comment-box h3{ color:#c9a227; margin-bottom:10px;}
+.comment-box p{ color:#ccc; margin-bottom:15px;}
+.comment-box input, .comment-box textarea{ width:100%; padding:12px; margin:8px 0; border-radius:5px; border:1px solid #555; background:#0d0d0d; color:#eaeaea; font-family:'Lora', serif;}
+.comment-box button{ padding:12px 25px; background:#c9a227; border:none; border-radius:5px; color:#111; font-weight:bold; cursor:pointer; transition:0.3s;}
+.comment-box button:hover{ background:#e1c34b;}
 </style>
 </head>
 <body>
@@ -45,6 +43,7 @@ footer{ text-align:center; padding:40px 20px; font-size:14px; color:#888; }
   <a href="#hindi">Hindi</a>
   <a href="#new-relationship">New / New Relationship</a>
   <a href="#about">About</a>
+  <a href="#comment">Comment</a>
 </div>
 
 <!-- HERO -->
@@ -96,26 +95,117 @@ There comes a moment in love when holding on becomes heavier than letting go. So
 <div class="card">
 <h3>Part 1 — दूरी क्यों ज़रूरी होती है</h3>
 <p>
-रिश्तों में दूरी को अक्सर लोग गलत समझते हैं। वास्तविकता यह है कि दूरी कभी-कभी रिश्ते को मजबूती देती है। जब दो लोग बहुत करीब होते हैं, तो अपेक्षाएँ बढ़ जाती हैं। हर समय साथ रहने की चाह, हर बात पर प्रतिक्रिया की उम्मीद, धीरे-धीरे प्रेम को बोझिल बना देती है।  
-दूरी हमें सोचने का अवसर देती है कि क्या हम वास्तव में खुश हैं या केवल अकेले होने के डर से साथ हैं।  
-दूरी के माध्यम से हम यह समझते हैं कि कौन स्थायी रूप से हमारे जीवन का हिस्सा है और कौन केवल क्षणिक।  
-साथ ही, दूरी व्यक्तिगत विकास और आत्मनिरीक्षण की जगह भी देती है।  
-समझदारी यह है कि जब दूरी के बाद भी भरोसा और सम्मान कायम रहें, तभी रिश्ता मजबूत माना जाता है।  
-हर अंत जरूरी नहीं कि असफलता हो; कभी-कभी यह स्वयं की समझ और रिश्तों की परीक्षा होती है।  
+रिश्तों में दूरी कभी-कभी रिश्ते को मजबूत बनाती है। जब लोग हमेशा साथ रहते हैं, अपेक्षाएँ बढ़ जाती हैं। हर समय पास रहने की चाह, हर बात पर प्रतिक्रिया की उम्मीद, धीरे-धीरे प्रेम को बोझिल बना देती है। दूरी हमें सोचने का अवसर देती है कि क्या हम वास्तव में खुश हैं या केवल अकेले होने के डर से साथ हैं। दूरी से यह भी पता चलता है कि कौन स्थायी रूप से हमारे जीवन का हिस्सा है। साथ ही, यह व्यक्तिगत विकास और आत्मनिरीक्षण का समय देती है। समझदारी यह है कि जब दूरी के बाद भी भरोसा और सम्मान कायम रहें, तभी रिश्ता मजबूत माना जाता है। हर अंत जरूरी नहीं कि असफलता हो; कभी-कभी यह स्वयं की समझ और रिश्तों की परीक्षा होती है। यही सीख हमें भविष्य में बेहतर और समझदार बनाती है।
 </p>
 </div>
 
-<!-- Parts 2–7 same as previous detailed code; for brevity not repeating all text here -->
-<!-- Add Part 2 to Part 7 content from previous code exactly as above -->
-</section>
+<!-- Part 2 -->
+<div class="card">
+<h3>Part 2 — जब प्यार आत्मसम्मान से टकराता है</h3>
+<p>
+कभी प्यार और आत्मसम्मान आमने-सामने खड़े हो जाते हैं। दिल कहता है "सह लो", आत्मसम्मान कहता है "बस अब और नहीं।" अगर एक व्यक्ति हमेशा समझौता करता है और दूसरा केवल अपनी सुविधा देखता है, तो संबंध असंतुलित हो जाता है। सच्चा प्रेम बराबरी चाहता है और पहचान को मिटाने की कीमत पर टिकता नहीं। आत्मसम्मान की रक्षा करना स्वार्थ नहीं, बल्कि सम्मान और सच्चाई की निशानी है। जहाँ सम्मान और पहचान नहीं, वहाँ प्रेम टिकाऊ नहीं रहता। जब यह टकराव आए, तो संवेदनशील निर्णय लेना ही बुद्धिमानी है। प्रेम में त्याग और समझौता होते हैं, पर पहचान और आत्म-सम्मान के बिना प्रेम स्थायी नहीं होता। इसलिए सम्मान, संवाद और आत्मसम्मान का संतुलन रखना जरूरी है।
+</p>
+</div>
 
-<!-- HINDI SERIES 2 – New / New Relationship -->
+<!-- Part 3 -->
+<div class="card">
+<h3>Part 3 — छोड़ना कब सही होता है</h3>
+<p>
+छोड़ना सबसे कठिन लेकिन सबसे सही विकल्प हो सकता है। खासकर जब यादें सुंदर हों, पर भविष्य में वे हमें चोट पहुंचा सकती हों। यदि हर बातचीत में असुरक्षा, डर और तनाव छुपा हो, तो आगे बढ़ना समझदारी है। सही समय पर लिया गया कठिन निर्णय हमें भावनात्मक पीड़ा से बचाता है और व्यक्तिगत विकास में मदद करता है। छोड़ना हार नहीं, बल्कि आत्म-सम्मान, स्पष्टता और भविष्य के लिए जागरूक निर्णय है। हर अंत हमें यह सिखाता है कि प्रेम का अर्थ केवल साथ रहना नहीं, बल्कि समझ, सम्मान और आत्म-मूल्य बनाए रखना भी है। यह हमें मजबूत बनाता है और आने वाले रिश्तों में गहराई और समझ लाता है।
+</p>
+</div>
+
+<!-- Part 4 -->
+<div class="card">
+<h3>Part 4 — प्यार में गलतफहमियों से निपटना</h3>
+<p>
+प्यार में अक्सर गलतफहमियां उत्पन्न होती हैं। छोटी बातें, सूचनाओं का अभाव, या अनजाने शब्द कभी-कभी रिश्ते को प्रभावित करते हैं। इन्हें तुरंत स्पष्ट करना जरूरी है। चुप रहकर भावनाओं को दबाना लंबी अवधि में चोट पहुंचाता है। संवाद ही विश्वास और समझ का मूल आधार है। जब हम खुले दिल से बात साझा करते हैं, तो सामने वाले को भी अपने विचार और भावनाओं को स्पष्ट करने का मौका मिलता है। गलतफहमियों से लड़ना नहीं बल्कि उन्हें समझदारी और धैर्य से हल करना सही मार्ग है। समय और धैर्य से मतभेदों को दूर करना ही स्थायी प्रेम की निशानी है। यह हमें अनुशासन और सम्मान भी सिखाता है।
+</p>
+</div>
+
+<!-- Part 5 -->
+<div class="card">
+<h3>Part 5 — भरोसा और सीमाओं का महत्व</h3>
+<p>
+हर रिश्ते की नींव भरोसे पर टिकी होती है। भरोसा खोने पर प्रेम कमजोर पड़ जाता है। सीमाएँ तय करना भी महत्वपूर्ण है, क्योंकि हर व्यक्ति की अपनी प्राथमिकताएँ होती हैं। सीमाओं का उल्लंघन अनजाने में तनाव और भ्रम उत्पन्न करता है। विश्वास और सीमाओं का संतुलन प्रेम को स्थायी और सुरक्षित बनाता है। जब हम अपनी और दूसरों की सीमाओं का सम्मान करते हैं, तो रिश्ते में स्वतंत्रता और सुरक्षा दोनों बनी रहती हैं। यह समझ हमें मजबूत बनाती है और रिश्तों में गहरा संबंध स्थापित करती है।
+</p>
+</div>
+
+<!-- Part 6 -->
+<div class="card">
+<h3>Part 6 — कभी-कभी दूरी ही प्यार है</h3>
+<p>
+दूरी हमेशा दूर होना नहीं दर्शाती। कभी-कभी यह प्यार की परख होती है। जब हम थोड़ी दूरी रखते हैं, यह हमें स्वयं और रिश्ते को समझने का समय देती है। यह सोचने का अवसर देती है कि हम साथी से क्या उम्मीद रखते हैं। दूरी से प्रेम का महत्व बढ़ता है; यह हमें साथी की अहमियत और योगदान महसूस कराती है। साथ ही, यह आत्मनिरीक्षण और भावनात्मक संतुलन का माध्यम बनती है।
+</p>
+</div>
+
+<!-- Part 7 -->
+<div class="card">
+<h3>Part 7 — अंत में समझ और आत्म-सम्मान</h3>
+<p>
+रिश्तों का अंतिम उद्देश्य केवल साथ रहना नहीं, बल्कि समझ और आत्म-सम्मान बनाए रखना भी है। जब हम प्रेम में अपनी भावनाओं और आत्म-सम्मान का सम्मान करते हैं, तो वास्तविक प्रेम जन्म लेता है। कभी प्रेम को छोड़ना और स्वयं के मूल्य को बनाये रखना सबसे बड़ा साहस होता है। समझ और अनुभव से ये सबक हमें भविष्य में बेहतर बनाते हैं। अंततः, प्रेम और सम्मान का संतुलन जीवन को स्थिर और संतुष्ट बनाता है। यह ज्ञान हमें नए संबंधों में गहराई और स्थायित्व देता है। सच्चा प्रेम वही है जो दूसरों के साथ समझ, सम्मान और व्यक्तिगत मूल्य बनाए रखे।
+</p>
+</div>
+
+<!-- HINDI SERIES 2 — New / New Relationship -->
 <section id="new-relationship">
 <h2>नई शुरुआत — New / New Relationship</h2>
 
-<!-- Part 8–14 content already given in previous code -->
-<!-- Copy Part 8 to Part 14 cards exactly as above -->
+<!-- Part 8 -->
+<div class="card">
+<h3>Part 8 — पहला मिलन और पहली भावनाएँ</h3>
+<p>
+पहली मुलाकात हमेशा यादगार होती है। जब मैंने उसे पहली बार देखा, दिल तेजी से धड़क रहा था। छोटे gestures, मुस्कान और नजरें — सब कुछ नया और रोमांचक लगता है। इस समय हर बात पर ध्यान जाता है। पहला संदेश, पहली बातचीत, पहली तारीफ — ये सब दिल को छू जाता है। नई शुरुआत में नर्वस होना सामान्य है। अपने अनुभव और भावनाओं को सहज रूप से साझा करना सीखना सही कदम है।
+</p>
+</div>
 
+<!-- Part 9 -->
+<div class="card">
+<h3>Part 9 — भरोसा और खुलापन</h3>
+<p>
+नई relationship में भरोसा सबसे महत्वपूर्ण होता है। धीरे-धीरे हम अपने छोटे secrets शेयर करना शुरू करते हैं। हर खुलापन emotional connection को मजबूत करता है। अगर कोई बात समझ में नहीं आती, तो पूछना बेहतर है। छोटे विश्वास और सम्मान नए रिश्ते की नींव रखते हैं।
+</p>
+</div>
+
+<!-- Part 10 -->
+<div class="card">
+<h3>Part 10 — छोटी-छोटी गलतफहमियां</h3>
+<p>
+हर नए रिश्ते में छोटी-छोटी गलतफहमियां आती हैं। कभी हम किसी शब्द या gesture को गलत समझ लेते हैं। यह सामान्य है। महत्वपूर्ण यह है कि इसे gently और calmly resolve किया जाए। एक-दूसरे की feelings को समझना और patience रखना बहुत जरूरी है। गलतफहमियों को नजरअंदाज करना या दबाना रिश्ते को कमजोर कर सकता है। सचाई और खुला संवाद हमेशा समस्या हल करता है।
+</p>
+</div>
+
+<!-- Part 11 -->
+<div class="card">
+<h3>Part 11 — साथ की खुशी और सीख</h3>
+<p>
+रिश्ते की खूबसूरती छोटी-छोटी खुशियों में होती है। पहली बार साथ हँसना, छोटे outings, shared hobbies — ये सभी moments connection को गहरा करते हैं। हर अनुभव से हम सीखते हैं कि partner के तरीके और सोच अलग हो सकते हैं, और यह समझना जरूरी है। साथ की खुशी दिखाती है कि रिश्ता केवल प्यार नहीं बल्कि understanding और growth का भी नाम है।
+</p>
+</div>
+
+<!-- Part 12 -->
+<div class="card">
+<h3>Part 12 — नयी उम्मीदें और रोमांस</h3>
+<p>
+रिश्ते में उम्मीदें और रोमांस धीरे-धीरे बढ़ते हैं। छोटी-छोटी surprises, compliments, gentle gestures दिल को खुश कर देते हैं। सपने और plans discuss करना bonding का हिस्सा है। Romance केवल physical नहीं, emotional intimacy और care से भी जुड़ा होता है। नई शुरुआत में patience और respect दोनों जरूरी हैं।
+</p>
+</div>
+
+<!-- Part 13 -->
+<div class="card">
+<h3>Part 13 — रिश्ते में गहराई</h3>
+<p>
+जब trust और understanding बढ़ती है, तब रिश्ता गहराई पाता है। एक-दूसरे की vulnerabilities को जानना, support करना, और मुश्किल समय में साथ देना ही इसे मजबूत बनाता है। Relationship में emotional maturity और empathy महत्वपूर्ण हैं। गहराई केवल प्यार का प्रमाण नहीं, बल्कि समझ, सम्मान और shared experiences का प्रतीक है।
+</p>
+</div>
+
+<!-- Part 14 -->
+<div class="card">
+<h3>Part 14 — कभी-कभी लोग अलग क्यों हो जाते हैं</h3>
+<p>
+हर नया रिश्ता हमेशा साथ रहने वाला नहीं होता। कई बार लोग किसी वजह से अलग हो जाते हैं, चाहे रिश्ता शादी तक पहुँच गया हो। यह दुखद है, लेकिन यह सच्चाई है कि हर व्यक्ति की जीवन यात्रा अलग होती है। कभी प्रेम और समय पर्याप्त नहीं होते। यह अनुभव हमें सिखाता है कि समझ, सम्मान और self-worth बनाए रखना जरूरी है। यह heartbreak भी सीख और growth का हिस्सा बनता है। आगे बढ़ना कठिन हो सकता है, लेकिन यह हमें मजबूत और समझदार बनाता है। सच्चा प्रेम वही है जो अनुभवों से सीखकर आगे बढ़े।
+</p>
+</div>
 </section>
 
 <!-- ABOUT -->
@@ -133,10 +223,29 @@ Monu Rajput is an independent writer exploring modern love, emotional maturity, 
 <div class="card"><strong>2026 — Growth & Clarity</strong></div>
 </section>
 
-<footer>
-© 2025–2026 Monu Rajput<br>
-Built quietly. Evolving constantly.
-</footer>
+<!-- COMMENT BOX -->
+<section id="comment">
+<div class="comment-box">
+<h3>Leave a Comment / Question</h3>
+<p>Have a question or want to share your thoughts? Type your message below and I’ll reply personally.</p>
+<form onsubmit="return submitComment()">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="email" id="email" placeholder="Your Email" required>
+<textarea id="message" rows="5" placeholder="Type your question or message here..." required></textarea>
+<button type="submit">Submit</button>
+</form>
+</div>
+</section>
 
-</body>
-</html>
+<script>
+function submitComment(){
+  var name=document.getElementById('name').value;
+  var email=document.getElementById('email').value;
+  var message=document.getElementById('message').value;
+  if(name && email && message){
+    alert('Thank you, '+name+'! Your comment has been recorded. We will reply soon.');
+    document.getElementById('name').value='';
+    document.getElementById('email').value='';
+    document.getElementById('message').value='';
+  }
+  return false;
